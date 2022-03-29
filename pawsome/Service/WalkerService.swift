@@ -60,5 +60,38 @@ class WalkerService {
         }
     }
     
+    // MARK: registerWalker
+    func registerWalker(fullName:String, experience: String, price: String, phone: String, email: String, password: String, completion: @escaping (_ success: Bool, _ message: String, _ data:Walker?) -> ()) {
+        let url = Configuration.conf.baseURL + "walker"
+        let params = [
+            "fullName": fullName,
+            "phone": phone,
+            "email": email,
+            "password": password,
+            "experience": experience,
+            "price": price
+        ] as [String: Any]
+        
+        AF.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+            guard let data = responseData.data else {
+                completion(false, "Something went wrong", nil)
+                return
+            }
+            
+            do {
+                let data = try JSONDecoder().decode(ApiResponse<Walker>.self, from: data)
+                
+                // save the token in the database... here..
+                
+                
+                completion(data.isSuccess,data.message, data.data)
+            } catch {
+                print("error", error)
+                completion(false, "Soemthing is wrong",nil)
+            }
+            
+        }
+    }
+    
     
 }

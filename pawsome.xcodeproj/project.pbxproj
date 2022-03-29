@@ -15,6 +15,7 @@
 		5B9FA5FE27F13D0600FF2840 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA5FD27F13D0600FF2840 /* Response.swift */; };
 		5B9FA60227F1424600FF2840 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA60127F1424600FF2840 /* LoginViewController.swift */; };
 		5B9FA60527F144B000FF2840 /* WalkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA60427F144B000FF2840 /* WalkerService.swift */; };
+		5BF793D127F3AE1200D70107 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793D027F3AE1200D70107 /* RegistrationViewController.swift */; };
 		B24CCEAC27EA484E00F4C81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CCEAB27EA484E00F4C81D /* AppDelegate.swift */; };
 		B24CCEAE27EA484E00F4C81D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CCEAD27EA484E00F4C81D /* SceneDelegate.swift */; };
 		B24CCEB027EA484E00F4C81D /* ChooseUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CCEAF27EA484E00F4C81D /* ChooseUserController.swift */; };
@@ -53,6 +54,7 @@
 		5B9FA5FD27F13D0600FF2840 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		5B9FA60127F1424600FF2840 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5B9FA60427F144B000FF2840 /* WalkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerService.swift; sourceTree = "<group>"; };
+		5BF793D027F3AE1200D70107 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		71FCAF41928341FBD120FC3D /* Pods-pawsome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pawsome.release.xcconfig"; path = "Target Support Files/Pods-pawsome/Pods-pawsome.release.xcconfig"; sourceTree = "<group>"; };
 		B24CCEA827EA484E00F4C81D /* pawsome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pawsome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24CCEAB27EA484E00F4C81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				B24CCEAF27EA484E00F4C81D /* ChooseUserController.swift */,
 				5B9FA60127F1424600FF2840 /* LoginViewController.swift */,
 				5B8473D727F272EE00C08ADB /* DashboardViewController.swift */,
+				5BF793D027F3AE1200D70107 /* RegistrationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				5B8473D827F272EE00C08ADB /* DashboardViewController.swift in Sources */,
 				5B9FA60227F1424600FF2840 /* LoginViewController.swift in Sources */,
 				5B8473D227F260E400C08ADB /* UserType.swift in Sources */,
+				5BF793D127F3AE1200D70107 /* RegistrationViewController.swift in Sources */,
 				B24CCEB027EA484E00F4C81D /* ChooseUserController.swift in Sources */,
 				D566015D27F16B5800AA4556 /* Configuration.swift in Sources */,
 				5B9FA5FC27EF7A0900FF2840 /* Walker.swift in Sources */,
