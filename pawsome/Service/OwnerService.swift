@@ -30,6 +30,26 @@ class OwnerService {
         }
     }
     
+    func getAllRequestPosts(completion: @escaping (_ success: Bool, _ message: String, _ walkers: [OwnersPost
+                                                                                               ]) -> ()) {
+            let url = Configuration.conf.baseURL + "owner/post-request"
+            AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+                guard let data = responseData.data else {
+                    completion(false, "Something went wrong", [])
+                    return
+                }
+                
+                do {
+                    let walkerResponse = try JSONDecoder().decode(ApiResponse<[OwnersPost]>.self, from: data)
+                    completion(walkerResponse.isSuccess, walkerResponse.message, walkerResponse.data ?? [])
+                } catch {
+                    print("error", error)
+                    completion(false, "Something went wrong",[])
+                }
+                
+            }
+        }
+    
     //MARK: login
     func login(email: String, password: String, completion: @escaping (_ success: Bool, _ message: String, _ data:Owner?) -> ()) {
         let url = Configuration.conf.baseURL + "owner/login"

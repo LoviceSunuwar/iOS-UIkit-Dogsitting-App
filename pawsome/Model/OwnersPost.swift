@@ -7,20 +7,11 @@
 
 import Foundation
 
-class OwnersPost {
-    
-    var ownerName:String
-    var date:String
-    var image:String
-    var description:String
-
-    init(ownerName:String, date:String, image:String, description:String)
-    {
-        self.ownerName=ownerName
-        self.date=date
-        self.image=image
-        self.description=description
-    }
-
+struct OwnersPost: Codable {
+    var _id: String
+    var message: String
+    var userId:String
+    var userName: String!
+    var createdDate: String
 }
 

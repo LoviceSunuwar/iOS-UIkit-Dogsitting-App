@@ -24,12 +24,10 @@ class OwnersPostViewCell: UITableViewCell {
 
     func setOwnerPostCell(ownerPostObj:OwnersPost)
     {
-//        ownerName.text = "Hello"
-//        print(ownerPostObj.ownerName)
-        ownerName.text = ownerPostObj.ownerName;
-        date.text=ownerPostObj.date
-        desc.text=ownerPostObj.description
-        ownerImg.image = UIImage(named: ownerPostObj.image)
+        ownerName.text = ownerPostObj.userName;
+        date.text=ownerPostObj.createdDate
+        desc.text=ownerPostObj.message
+        ownerImg.image = UIImage(named: "dogs_name_icon")
         
     }
     

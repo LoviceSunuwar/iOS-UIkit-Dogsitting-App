@@ -24,7 +24,7 @@
 		B24CCEB827EA485100F4C81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24CCEB627EA485100F4C81D /* LaunchScreen.storyboard */; };
 		C71222BD27F3798D004CBDF0 /* OwnersPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222BC27F3798D004CBDF0 /* OwnersPost.swift */; };
 		C71222BF27F37AAC004CBDF0 /* OwnersPostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222BE27F37AAC004CBDF0 /* OwnersPostViewCell.swift */; };
-		C71222C127F386AD004CBDF0 /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C027F386AD004CBDF0 /* OwnerViewController.swift */; };
+		C71222C127F386AD004CBDF0 /* WalkerDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C027F386AD004CBDF0 /* WalkerDashboardViewController.swift */; };
 		C71222C327F38C72004CBDF0 /* WalkersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C227F38C72004CBDF0 /* WalkersListTableViewCell.swift */; };
 		C71222C527F39B1B004CBDF0 /* OwnerDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C427F39B1B004CBDF0 /* OwnerDashboardViewController.swift */; };
 		C71222C727F39B84004CBDF0 /* WalkersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C627F39B84004CBDF0 /* WalkersList.swift */; };
@@ -74,7 +74,7 @@
 		B24CCEC827EA485100F4C81D /* pawsomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pawsomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71222BC27F3798D004CBDF0 /* OwnersPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersPost.swift; sourceTree = "<group>"; };
 		C71222BE27F37AAC004CBDF0 /* OwnersPostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersPostViewCell.swift; sourceTree = "<group>"; };
-		C71222C027F386AD004CBDF0 /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
+		C71222C027F386AD004CBDF0 /* WalkerDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerDashboardViewController.swift; sourceTree = "<group>"; };
 		C71222C227F38C72004CBDF0 /* WalkersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkersListTableViewCell.swift; sourceTree = "<group>"; };
 		C71222C427F39B1B004CBDF0 /* OwnerDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerDashboardViewController.swift; sourceTree = "<group>"; };
 		C71222C627F39B84004CBDF0 /* WalkersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkersList.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 				B24CCEAF27EA484E00F4C81D /* ChooseUserController.swift */,
 				5B9FA60127F1424600FF2840 /* LoginViewController.swift */,
 				5B8473D727F272EE00C08ADB /* DashboardViewController.swift */,
-				C71222C027F386AD004CBDF0 /* OwnerViewController.swift */,
+				C71222C027F386AD004CBDF0 /* WalkerDashboardViewController.swift */,
 				C71222C427F39B1B004CBDF0 /* OwnerDashboardViewController.swift */,
 				5BF793D027F3AE1200D70107 /* RegistrationViewController.swift */,
 			);
@@ -402,7 +402,7 @@
 				5B9FA5FE27F13D0600FF2840 /* Response.swift in Sources */,
 				5B8473D027F1E03F00C08ADB /* Owner.swift in Sources */,
 				B24CCEAE27EA484E00F4C81D /* SceneDelegate.swift in Sources */,
-				C71222C127F386AD004CBDF0 /* OwnerViewController.swift in Sources */,
+				C71222C127F386AD004CBDF0 /* WalkerDashboardViewController.swift in Sources */,
 				5B8473CE27F1DFCB00C08ADB /* OwnerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
