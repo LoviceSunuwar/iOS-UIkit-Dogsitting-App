@@ -78,7 +78,7 @@ class RegistrationViewController: UIViewController {
                     defaults.set(email, forKey: "username")
                     defaults.set("owner", forKey: "userType")
                     
-                    appDelegate.goToDashboardPage()
+                    appDelegate.goToOwnerDashboardPage()
                 } else {
                     self.alert(message: message, title: "Registration Failed", okAction: nil)
                 }
@@ -98,7 +98,7 @@ class RegistrationViewController: UIViewController {
                     defaults.set(email, forKey: "username")
                     defaults.set("walker", forKey: "userType")
                     
-                    appDelegate.goToDashboardPage()
+                    appDelegate.goToWalkerDashboardPage()
                 } else {
                     self.alert(message: message, title: "Registration Failed", okAction: nil)
                 }

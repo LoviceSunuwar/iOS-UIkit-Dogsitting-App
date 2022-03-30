@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
                 let defaults = UserDefaults.standard
                 defaults.set(data?.fullName, forKey: "username")
                 defaults.set("owner", forKey: "userType")
-                appDelegate.goToDashboardPage()
+                appDelegate.goToOwnerDashboardPage()
             } else {
                 // show alert if username or password is incorrect
                 self.alert(message: message, title: "Unauthorized", okAction: nil)
@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
                 defaults.set(username, forKey: "username")
                 defaults.set("walker", forKey: "userType")
                 
-                appDelegate.goToDashboardPage()
+                appDelegate.goToWalkerDashboardPage()
             } else {
                 // show alert if username or password is incorrect
                 self.alert(message: message, title: "Unauthorized", okAction: nil)

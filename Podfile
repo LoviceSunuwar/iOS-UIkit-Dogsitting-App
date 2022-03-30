@@ -6,7 +6,8 @@ target 'pawsome' do
   use_frameworks!
 
   # Pods for pawsome
-pod 'Alamofire'
-pod 'SwiftyJSON'
+
+ pod 'Alamofire'
+ pod 'SwiftyJSON'
 
 end

@@ -23,8 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let defaults = UserDefaults.standard
         let username = defaults.value(forKey: "username")
+        let userType = defaults.value(forKey: "userType")
         if username != nil {
-            goToDashboardPage()
+            if ((userType as! String).lowercased()) == "owner" {
+                goToOwnerDashboardPage()
+            } else {
+                goToWalkerDashboardPage()
+            }
+            
         }
         return true
     }
@@ -37,10 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
     }
     
-    // To Change root vc to main task page (call when login)
-    func goToDashboardPage(){
+    // To Change root vc to main walker page (call when login)
+    func goToWalkerDashboardPage(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MainNavigation") as! UINavigationController
+        let vc = storyboard.instantiateViewController(withIdentifier: "WalkerNavigation") as! UITabBarController
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+    }
+    
+    // To Change root vc to main owner page (call when login)
+    func goToOwnerDashboardPage(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "OwnerNavigation") as! UITabBarController
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }
