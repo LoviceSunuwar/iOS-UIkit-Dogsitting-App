@@ -7,7 +7,7 @@
 
 import UIKit
 
-let deploymentMode: DeploymentMode = .local
+let deploymentMode: DeploymentMode = .uat
 
 /// GLOBAL VARIABLE CREATED
 var appDelegate: AppDelegate {

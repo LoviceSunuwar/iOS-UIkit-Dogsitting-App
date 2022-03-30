@@ -21,6 +21,12 @@
 		B24CCEB327EA484E00F4C81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24CCEB127EA484E00F4C81D /* Main.storyboard */; };
 		B24CCEB527EA485100F4C81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24CCEB427EA485100F4C81D /* Assets.xcassets */; };
 		B24CCEB827EA485100F4C81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24CCEB627EA485100F4C81D /* LaunchScreen.storyboard */; };
+		C71222BD27F3798D004CBDF0 /* OwnersPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222BC27F3798D004CBDF0 /* OwnersPost.swift */; };
+		C71222BF27F37AAC004CBDF0 /* OwnersPostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222BE27F37AAC004CBDF0 /* OwnersPostViewCell.swift */; };
+		C71222C127F386AD004CBDF0 /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C027F386AD004CBDF0 /* OwnerViewController.swift */; };
+		C71222C327F38C72004CBDF0 /* WalkersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C227F38C72004CBDF0 /* WalkersListTableViewCell.swift */; };
+		C71222C527F39B1B004CBDF0 /* WalkersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C427F39B1B004CBDF0 /* WalkersListViewController.swift */; };
+		C71222C727F39B84004CBDF0 /* WalkersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71222C627F39B84004CBDF0 /* WalkersList.swift */; };
 		CE1D8E74EA74E582B55C4CBF /* Pods_pawsome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B58542318FA43848B053024 /* Pods_pawsome.framework */; };
 		D566015B27F1698800AA4556 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566015A27F1698800AA4556 /* Token.swift */; };
 		D566015D27F16B5800AA4556 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566015C27F16B5800AA4556 /* Configuration.swift */; };
@@ -64,6 +70,12 @@
 		B24CCEB927EA485100F4C81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B24CCEBE27EA485100F4C81D /* pawsomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pawsomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24CCEC827EA485100F4C81D /* pawsomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pawsomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71222BC27F3798D004CBDF0 /* OwnersPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersPost.swift; sourceTree = "<group>"; };
+		C71222BE27F37AAC004CBDF0 /* OwnersPostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersPostViewCell.swift; sourceTree = "<group>"; };
+		C71222C027F386AD004CBDF0 /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
+		C71222C227F38C72004CBDF0 /* WalkersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkersListTableViewCell.swift; sourceTree = "<group>"; };
+		C71222C427F39B1B004CBDF0 /* WalkersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkersListViewController.swift; sourceTree = "<group>"; };
+		C71222C627F39B84004CBDF0 /* WalkersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkersList.swift; sourceTree = "<group>"; };
 		D3D06164670B8951AEA3FC6A /* Pods-pawsome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pawsome.debug.xcconfig"; path = "Target Support Files/Pods-pawsome/Pods-pawsome.debug.xcconfig"; sourceTree = "<group>"; };
 		D566015A27F1698800AA4556 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		D566015C27F16B5800AA4556 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -176,6 +188,12 @@
 				B24CCEB627EA485100F4C81D /* LaunchScreen.storyboard */,
 				B24CCEB927EA485100F4C81D /* Info.plist */,
 				D566015C27F16B5800AA4556 /* Configuration.swift */,
+				C71222BC27F3798D004CBDF0 /* OwnersPost.swift */,
+				C71222BE27F37AAC004CBDF0 /* OwnersPostViewCell.swift */,
+				C71222C027F386AD004CBDF0 /* OwnerViewController.swift */,
+				C71222C227F38C72004CBDF0 /* WalkersListTableViewCell.swift */,
+				C71222C427F39B1B004CBDF0 /* WalkersListViewController.swift */,
+				C71222C627F39B84004CBDF0 /* WalkersList.swift */,
 			);
 			path = pawsome;
 			sourceTree = "<group>";
@@ -357,9 +375,14 @@
 			files = (
 				D566015B27F1698800AA4556 /* Token.swift in Sources */,
 				5B8473D827F272EE00C08ADB /* DashboardViewController.swift in Sources */,
+				C71222C527F39B1B004CBDF0 /* WalkersListViewController.swift in Sources */,
+				C71222BF27F37AAC004CBDF0 /* OwnersPostViewCell.swift in Sources */,
 				5B9FA60227F1424600FF2840 /* LoginViewController.swift in Sources */,
+				C71222BD27F3798D004CBDF0 /* OwnersPost.swift in Sources */,
+				C71222C727F39B84004CBDF0 /* WalkersList.swift in Sources */,
 				5B8473D227F260E400C08ADB /* UserType.swift in Sources */,
 				B24CCEB027EA484E00F4C81D /* ChooseUserController.swift in Sources */,
+				C71222C327F38C72004CBDF0 /* WalkersListTableViewCell.swift in Sources */,
 				D566015D27F16B5800AA4556 /* Configuration.swift in Sources */,
 				5B9FA5FC27EF7A0900FF2840 /* Walker.swift in Sources */,
 				B24CCEAC27EA484E00F4C81D /* AppDelegate.swift in Sources */,
@@ -367,6 +390,7 @@
 				5B9FA5FE27F13D0600FF2840 /* Response.swift in Sources */,
 				5B8473D027F1E03F00C08ADB /* Owner.swift in Sources */,
 				B24CCEAE27EA484E00F4C81D /* SceneDelegate.swift in Sources */,
+				C71222C127F386AD004CBDF0 /* OwnerViewController.swift in Sources */,
 				5B8473CE27F1DFCB00C08ADB /* OwnerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
