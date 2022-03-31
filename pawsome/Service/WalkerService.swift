@@ -79,6 +79,7 @@ class WalkerService {
             }
             
             do {
+                print(data)
                 let data = try JSONDecoder().decode(ApiResponse<Walker>.self, from: data)
                 
                 // save the token in the database... here..
