@@ -10,8 +10,7 @@ import Alamofire
 
 class OwnerService {
     
-    func getAllOwner(completion: @escaping (_ success: Bool, _ message: String, _ walkers: [Owner
-                                                                                           ]) -> ()) {
+    func getAllOwner(completion: @escaping (_ success: Bool, _ message: String, _ owners: [Owner]) -> ()) {
         let url = Configuration.conf.baseURL + "owner"
         AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
             guard let data = responseData.data else {
@@ -20,8 +19,8 @@ class OwnerService {
             }
             
             do {
-                let walkerResponse = try JSONDecoder().decode(ApiResponse<[Owner]>.self, from: data)
-                completion(walkerResponse.isSuccess, walkerResponse.message, walkerResponse.data ?? [])
+                let ownersResponse = try JSONDecoder().decode(ApiResponse<[Owner]>.self, from: data)
+                completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
             } catch {
                 print("error", error)
                 completion(false, "Something went wrong",[])
@@ -30,7 +29,7 @@ class OwnerService {
         }
     }
     
-    func getAllRequestPosts(completion: @escaping (_ success: Bool, _ message: String, _ walkers: [OwnersPost
+    func getAllRequestPosts(completion: @escaping (_ success: Bool, _ message: String, _ owners: [OwnersPost
                                                                                                ]) -> ()) {
             let url = Configuration.conf.baseURL + "owner/post-request"
             AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
@@ -40,8 +39,8 @@ class OwnerService {
                 }
                 
                 do {
-                    let walkerResponse = try JSONDecoder().decode(ApiResponse<[OwnersPost]>.self, from: data)
-                    completion(walkerResponse.isSuccess, walkerResponse.message, walkerResponse.data ?? [])
+                    let ownersResponse = try JSONDecoder().decode(ApiResponse<[OwnersPost]>.self, from: data)
+                    completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
                 } catch {
                     print("error", error)
                     completion(false, "Something went wrong",[])
@@ -56,7 +55,7 @@ class OwnerService {
         let params = [
             "email": email,
             "password": password,
-            "type": "walker"
+            "type": "owner"
         ] as [String: Any]
         
         AF.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in

@@ -9,7 +9,7 @@ import Foundation
 
 struct Walker: Codable {
     
-    var _id: String
+    var id: String?
     var fullName: String
     var phone: String
     var email: String

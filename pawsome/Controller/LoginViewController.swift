@@ -1,56 +1,70 @@
 //
 //  LoginViewController.swift
-//  pawsome
+//  Pawsome
 //
-//  Created by Roch on 27/03/2022.
+//  Created by Nhuja Shakya on 3/23/22.
 //
 
 import UIKit
+import SwiftSpinner
 
 class LoginViewController: UIViewController {
-    var userType: UserType!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordStackView: UIStackView!
+    
     var walkerService = WalkerService()
     var ownerService = OwnerService()
     
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var titleLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        titleLabel.text = userType == .walker ? "Walker Login" : "Owner Login"
+        self.setupViews()
     }
     
-    // MARK: @IBAction
-    @IBAction func login(_ sender: UIButton) {
-        let userN:String = username.text ?? ""
-        let pass:String = password.text ?? ""
+    private func setupViews() {
+        emailTextField.setUnderLine()
+        passwordStackView.setUnderLine()
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func hideUnhideTapped(_ sender: Any) {
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+    }
+    
+    @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
         
-        if(userType == .walker) {
-            walkerLogin(username: userN, password: pass)
+    }
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        guard let email = emailTextField.text, !email.isEmpty else { self.alert(message: "Email is empty", title: nil, okAction: nil);
+            return }
+        guard email.isValidEmail() else { self.alert(message: "Email is invalid", title: nil, okAction: nil);
+            return }
+        guard let password = passwordTextField.text, !password.isEmpty else { self.alert(message: "Password is empty", title: nil, okAction: nil);
+            return }
+        
+        SwiftSpinner.show("Logging In...")
+        if NSLoginManager.isOwner() {
+            self.ownerLogin(username: email, password: password)
         } else {
-            self.ownerLogin(username: userN, password: pass)
+            self.walkerLogin(username: email, password: password)
         }
     }
     
-    
-    @IBAction func registrationHandler(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
-        vc.userType = userType
-        navigationController?.pushViewController(vc, animated: true)
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    //MARK: Common Functions
     func ownerLogin(username:String, password:String){
         ownerService.login(email: username, password: password) { success, message, data in
+            SwiftSpinner.hide()
             if success {
                 // store username and password to check if user has logged in later
-                let defaults = UserDefaults.standard
-                defaults.set(data?.fullName, forKey: "username")
-                defaults.set("owner", forKey: "userType")
+                GlobalConstants.KeyValues.token = data?.token ?? ""
                 appDelegate.goToOwnerDashboardPage()
             } else {
                 // show alert if username or password is incorrect
@@ -61,26 +75,16 @@ class LoginViewController: UIViewController {
     
     func walkerLogin(username:String, password:String){
         walkerService.login(email: username, password: password) { success, message, data in
+            SwiftSpinner.hide()
             if success {
                 // store username and password to check if user has logged in later
-                let defaults = UserDefaults.standard
-                defaults.set(username, forKey: "username")
-                defaults.set("walker", forKey: "userType")
-                
+                GlobalConstants.KeyValues.token = data?.token ?? ""
                 appDelegate.goToWalkerDashboardPage()
             } else {
                 // show alert if username or password is incorrect
                 self.alert(message: message, title: "Unauthorized", okAction: nil)
             }
         }
-    }
-    
-    func alert(message: String?, title: String? = nil, okAction: (()->())? = nil) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
-            okAction?()
-        }))
-        self.present(alertController, animated: true, completion: nil)
     }
     
 }

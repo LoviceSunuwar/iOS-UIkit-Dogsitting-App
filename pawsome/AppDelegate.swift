@@ -1,52 +1,49 @@
 //
 //  AppDelegate.swift
-//  pawsome
+//  Pawsome
 //
-//  Created by Lovice Sunuwar on 22/03/2022.
+//  Created by Nhuja Shakya on 3/22/22.
 //
 
 import UIKit
 
-let deploymentMode: DeploymentMode = .local
+let deploymentMode: DeploymentMode = .uat
 
-/// GLOBAL VARIABLE CREATED
 var appDelegate: AppDelegate {
     return (UIApplication.shared.delegate as! AppDelegate)
 }
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let defaults = UserDefaults.standard
-        let username = defaults.value(forKey: "username")
-        let userType = defaults.value(forKey: "userType")
-        if username != nil {
-            if ((userType as! String).lowercased()) == "owner" {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        
+        if NSLoginManager.isLoggedIn() {
+            if NSLoginManager.isOwner() {
                 goToOwnerDashboardPage()
             } else {
                 goToWalkerDashboardPage()
             }
-            
         }
         return true
     }
     
-    // To Change root vc to login (call when logout)
-    func goToLoginPage() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "InitialNavigation") as! UINavigationController
-        self.window?.rootViewController = vc
-        self.window?.makeKeyAndVisible()
+    
+    func application(
+      _ app: UIApplication,
+      open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) -> Bool {
+      return false
     }
     
     // To Change root vc to main walker page (call when login)
     func goToWalkerDashboardPage(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "WalkerNavigation") as! UITabBarController
+        let vc = storyboard.instantiateViewController(withIdentifier: "WalkerDashboardTabController") as! UITabBarController
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }
@@ -54,11 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // To Change root vc to main owner page (call when login)
     func goToOwnerDashboardPage(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "OwnerNavigation") as! UITabBarController
+        let vc = storyboard.instantiateViewController(withIdentifier: "OwnerDashboardTabController") as! UITabBarController
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }
     
-    
+    func goToWalkthroughNavigationControllerPage(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "WalkthroughNavigationController") as! UINavigationController
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+    }
 }
 
