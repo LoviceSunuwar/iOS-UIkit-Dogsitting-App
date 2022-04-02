@@ -26,7 +26,7 @@ class WalkerListViewController: UIViewController {
         self.setupTableView()
         self.getWalkers()
         
-        [[UILabel appearance] setFont:[UIFont fontWithName:@"Ubuntu-Regular" size:17.0]];
+       // [[UILabel appearance] setFont:[UIFont fontWithName:@"Ubuntu-Regular" size:17.0]];
     }
     
     private func setupTableView() {
