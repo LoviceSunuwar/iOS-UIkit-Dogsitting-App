@@ -2,8 +2,8 @@
 //  NSUserDefault.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 8/30/20.
-//  Copyright © 2020 Nhuja Shakya. All rights reserved.
+//  Created by Roch on 8/30/20.
+//  Copyright © 2020 Roch. All rights reserved.
 //
 
 import Foundation
