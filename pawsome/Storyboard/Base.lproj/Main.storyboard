@@ -872,19 +872,59 @@ Walkers walk them</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WUy-rt-azW">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="411" height="665"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BSG-QP-YGN">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="1.5" y="0.0" width="411" height="665"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cyP-X4-e6s">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="411" height="665"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68k-3d-ROX">
+                                                    <rect key="frame" x="0.0" y="-18" width="411" height="543"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JTX-wF-TxE">
+                                                    <rect key="frame" x="0.0" y="550" width="555.5" height="70"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick walker availability at your doorstep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0S-PP-wF1">
+                                                            <rect key="frame" x="16" y="0.0" width="523.5" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnh-XL-ri5">
+                                                            <rect key="frame" x="259" y="52" width="37.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="j0S-PP-wF1" firstAttribute="top" secondItem="JTX-wF-TxE" secondAttribute="top" id="EBT-9x-3zH"/>
+                                                        <constraint firstItem="Bnh-XL-ri5" firstAttribute="top" secondItem="j0S-PP-wF1" secondAttribute="bottom" constant="16" id="R22-vJ-8dV"/>
+                                                        <constraint firstItem="j0S-PP-wF1" firstAttribute="leading" secondItem="JTX-wF-TxE" secondAttribute="leading" constant="16" id="b67-6N-cn3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="j0S-PP-wF1" secondAttribute="trailing" constant="16" id="mgK-GA-rwF"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="68k-3d-ROX" firstAttribute="top" secondItem="cyP-X4-e6s" secondAttribute="top" id="BYL-U1-Jab"/>
+                                                <constraint firstItem="68k-3d-ROX" firstAttribute="leading" secondItem="cyP-X4-e6s" secondAttribute="leading" constant="16" id="Ohq-92-yAC"/>
+                                                <constraint firstItem="68k-3d-ROX" firstAttribute="top" secondItem="cyP-X4-e6s" secondAttribute="top" id="OxA-8t-5T8"/>
+                                                <constraint firstAttribute="trailing" secondItem="68k-3d-ROX" secondAttribute="trailing" id="Rws-8s-vfs"/>
+                                                <constraint firstItem="68k-3d-ROX" firstAttribute="leading" secondItem="cyP-X4-e6s" secondAttribute="leading" id="WhL-gE-EQf"/>
+                                                <constraint firstAttribute="trailing" secondItem="68k-3d-ROX" secondAttribute="trailing" id="fSS-3v-7Ue"/>
+                                                <constraint firstAttribute="trailing" secondItem="68k-3d-ROX" secondAttribute="trailing" constant="16" id="miW-w1-FpB"/>
+                                                <constraint firstItem="JTX-wF-TxE" firstAttribute="top" secondItem="68k-3d-ROX" secondAttribute="bottom" constant="16" id="qCp-AY-N3A"/>
+                                                <constraint firstItem="68k-3d-ROX" firstAttribute="top" secondItem="cyP-X4-e6s" secondAttribute="top" id="xSA-HK-PEA"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="411" height="665"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -907,8 +947,8 @@ Walkers walk them</string>
                                     <action selector="nextBtnClicked:" destination="Uft-Pv-iGt" eventType="touchUpInside" id="mgz-M5-z3x"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="imC-JT-RLy">
-                                <rect key="frame" x="149" y="730" width="116" height="26"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="imC-JT-RLy">
+                                <rect key="frame" x="149" y="724" width="116" height="26"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemMintColor"/>
                             </pageControl>
@@ -934,7 +974,7 @@ Walkers walk them</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lq-LV-zdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194.2028985507247" y="-729.24107142857144"/>
+            <point key="canvasLocation" x="1069.5652173913045" y="-390.40178571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ETe-j0-7K8">
@@ -1198,7 +1238,7 @@ Walkers walk them</string>
         <scene sceneID="gRZ-ci-kIc">
             <objects>
                 <viewController id="imA-f7-Wft" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IkO-f3-19c">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="IkO-f3-19c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1220,7 +1260,7 @@ Walkers walk them</string>
                                 <color key="textColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="View Liam's Profile &gt;&gt;&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-Hx-H0O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="View Liam's Profile &gt;&gt;&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-Hx-H0O">
                                 <rect key="frame" x="20" y="283" width="327" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="eTM-lb-LrD"/>
@@ -1229,7 +1269,7 @@ Walkers walk them</string>
                                 <color key="textColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
                                 <rect key="frame" x="16" y="73.5" width="382" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YVc-ld-est">
@@ -1306,7 +1346,7 @@ Walkers walk them</string>
                                     <constraint firstAttribute="width" secondItem="z8b-LQ-wjn" secondAttribute="height" multiplier="349:117" id="f9C-cm-2IF"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hs-X2K">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hs-X2K">
                                 <rect key="frame" x="19" y="326" width="374" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="7uu-Ww-NB0"/>
@@ -2722,6 +2762,9 @@ Walkers walk them</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
