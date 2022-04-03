@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DF5ADB927F90C4F00EDB6B8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADB827F90C4F00EDB6B8 /* OnboardingViewController.swift */; };
+		4DF5ADBC27F9192100EDB6B8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADBB27F9192100EDB6B8 /* UIView+Extension.swift */; };
 		6922EF144757C89DC32ECC68 /* Pods_Pawsome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864612827240C32ADF71D728 /* Pods_Pawsome.framework */; };
 		C744089727F754BA00226CB0 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C744089627F754BA00226CB0 /* Ubuntu-Regular.ttf */; };
 		D526C9CF27E981730079DBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D526C9CE27E981730079DBDD /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		22855855E3C6546DA3154897 /* Pods-Pawsome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pawsome.debug.xcconfig"; path = "Target Support Files/Pods-Pawsome/Pods-Pawsome.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF5ADB827F90C4F00EDB6B8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = pawsome/View/onboarding/OnboardingViewController.swift; sourceTree = SOURCE_ROOT; };
+		4DF5ADBB27F9192100EDB6B8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "pawsome/Extensions/UIView+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		864612827240C32ADF71D728 /* Pods_Pawsome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pawsome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744089627F754BA00226CB0 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
 		D526C9CB27E981730079DBDD /* Pawsome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pawsome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,14 @@
 			path = onboarding;
 			sourceTree = "<group>";
 		};
+		4DF5ADBA27F9181E00EDB6B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DF5ADBB27F9192100EDB6B8 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C744089527F7548F00226CB0 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		D526C9CD27E981730079DBDD /* Pawsome */ = {
 			isa = PBXGroup;
 			children = (
+				4DF5ADBA27F9181E00EDB6B8 /* Extensions */,
 				C744089527F7548F00226CB0 /* Font */,
 				D53BEB0C27F577F000201220 /* Helper */,
 				D526C9E527E984950079DBDD /* Storyboard */,
@@ -480,6 +491,7 @@
 				D53BEB0127F56C4C00201220 /* Response.swift in Sources */,
 				D5B8C21327F5638500A8271D /* ViewController+Extension.swift in Sources */,
 				D53BEAFA27F56C3A00201220 /* Configuration.swift in Sources */,
+				4DF5ADBC27F9192100EDB6B8 /* UIView+Extension.swift in Sources */,
 				D53BEB1427F581ED00201220 /* WalkerMoreViewController.swift in Sources */,
 				D5F6F14E27ECC988003A343C /* SignupViewController.swift in Sources */,
 				D534199C27F60E6D006411E4 /* WalkerConfirmWalkViewController.swift in Sources */,
