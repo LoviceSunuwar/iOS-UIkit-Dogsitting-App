@@ -10,6 +10,7 @@
 		4DF5ADB927F90C4F00EDB6B8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADB827F90C4F00EDB6B8 /* OnboardingViewController.swift */; };
 		4DF5ADBC27F9192100EDB6B8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADBB27F9192100EDB6B8 /* UIView+Extension.swift */; };
 		4DF5ADBE27F91EAD00EDB6B8 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADBD27F91EAD00EDB6B8 /* OnboardingSlide.swift */; };
+		4DF5ADC027F9282100EDB6B8 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADBF27F9282100EDB6B8 /* OnboardingCollectionViewCell.swift */; };
 		6922EF144757C89DC32ECC68 /* Pods_Pawsome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864612827240C32ADF71D728 /* Pods_Pawsome.framework */; };
 		C744089727F754BA00226CB0 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C744089627F754BA00226CB0 /* Ubuntu-Regular.ttf */; };
 		D526C9CF27E981730079DBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D526C9CE27E981730079DBDD /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		4DF5ADB827F90C4F00EDB6B8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = pawsome/View/onboarding/OnboardingViewController.swift; sourceTree = SOURCE_ROOT; };
 		4DF5ADBB27F9192100EDB6B8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "pawsome/Extensions/UIView+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		4DF5ADBD27F91EAD00EDB6B8 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingSlide.swift; path = pawsome/Model/OnboardingSlide.swift; sourceTree = SOURCE_ROOT; };
+		4DF5ADBF27F9282100EDB6B8 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingCollectionViewCell.swift; path = pawsome/View/onboarding/OnboardingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		864612827240C32ADF71D728 /* Pods_Pawsome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pawsome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744089627F754BA00226CB0 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
 		D526C9CB27E981730079DBDD /* Pawsome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pawsome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				4DF5ADB827F90C4F00EDB6B8 /* OnboardingViewController.swift */,
+				4DF5ADBF27F9282100EDB6B8 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = onboarding;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				D53BEB2427F5A84100201220 /* WalkerProfileViewController.swift in Sources */,
 				D5B8C21127F562AF00A8271D /* String+Extension.swift in Sources */,
 				D53BEB2827F5AD5000201220 /* OwnerChatTableViewCell.swift in Sources */,
+				4DF5ADC027F9282100EDB6B8 /* OnboardingCollectionViewCell.swift in Sources */,
 				D588E8BC27EAF70E00599370 /* LoginViewController.swift in Sources */,
 				D53BEB1227F57F8500201220 /* OwnerMoreViewController.swift in Sources */,
 				D534198A27F5F558006411E4 /* Dog.swift in Sources */,
