@@ -10,4 +10,5 @@ target 'Pawsome' do
  pod 'SwiftyJSON'
  pod 'SwiftSpinner', :inhibit_warnings => true
  pod 'AlamofireImage'
+
 end

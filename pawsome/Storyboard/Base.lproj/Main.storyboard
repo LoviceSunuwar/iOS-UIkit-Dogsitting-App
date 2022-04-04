@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c2S-3C-fJ1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uft-Pv-iGt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -859,6 +860,116 @@ Walkers walk them</string>
             </objects>
             <point key="canvasLocation" x="4926" y="-425"/>
         </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="hdh-ei-hP2">
+            <objects>
+                <viewController id="Uft-Pv-iGt" customClass="OnboardingViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d7z-bC-alt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WPx-oC-gs5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WUy-rt-azW">
+                                    <size key="itemSize" width="411" height="665"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="BSG-QP-YGN" customClass="OnboardingCollectionViewCell" customModule="Pawsome" customModuleProvider="target">
+                                        <rect key="frame" x="1.5" y="0.0" width="411" height="665"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cyP-X4-e6s">
+                                            <rect key="frame" x="0.0" y="0.0" width="411" height="665"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDu-8b-tXq">
+                                                    <rect key="frame" x="0.0" y="8" width="411" height="480"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JTX-wF-TxE">
+                                                    <rect key="frame" x="-11" y="549" width="434.5" height="61.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick walker availability at your doorstep" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0S-PP-wF1">
+                                                            <rect key="frame" x="16" y="0.0" width="402.5" height="27.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get best walker in town" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnh-XL-ri5">
+                                                            <rect key="frame" x="137.5" y="43.5" width="160" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="j0S-PP-wF1" firstAttribute="top" secondItem="JTX-wF-TxE" secondAttribute="top" id="EBT-9x-3zH"/>
+                                                        <constraint firstItem="Bnh-XL-ri5" firstAttribute="top" secondItem="j0S-PP-wF1" secondAttribute="bottom" constant="16" id="R22-vJ-8dV"/>
+                                                        <constraint firstItem="j0S-PP-wF1" firstAttribute="leading" secondItem="JTX-wF-TxE" secondAttribute="leading" constant="16" id="b67-6N-cn3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="j0S-PP-wF1" secondAttribute="trailing" constant="16" id="mgK-GA-rwF"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uDu-8b-tXq" firstAttribute="leading" secondItem="cyP-X4-e6s" secondAttribute="leading" id="Skd-qg-VHN"/>
+                                                <constraint firstItem="uDu-8b-tXq" firstAttribute="top" secondItem="cyP-X4-e6s" secondAttribute="top" id="fnW-zv-bp2"/>
+                                                <constraint firstAttribute="trailing" secondItem="uDu-8b-tXq" secondAttribute="trailing" id="gk7-MP-1dm"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="411" height="665"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-H6-cUq">
+                                <rect key="frame" x="132" y="772" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0q1-6j-579"/>
+                                    <constraint firstAttribute="height" constant="50" id="cpi-0a-EM8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClicked:" destination="Uft-Pv-iGt" eventType="touchUpInside" id="mgz-M5-z3x"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="imC-JT-RLy">
+                                <rect key="frame" x="149" y="724" width="116" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemMintColor"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r1Q-G4-mSr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="imC-JT-RLy" firstAttribute="centerX" secondItem="r1Q-G4-mSr" secondAttribute="centerX" id="28n-lc-KEP"/>
+                            <constraint firstItem="WPx-oC-gs5" firstAttribute="leading" secondItem="r1Q-G4-mSr" secondAttribute="leading" id="D2x-c2-PDa"/>
+                            <constraint firstItem="WPx-oC-gs5" firstAttribute="trailing" secondItem="r1Q-G4-mSr" secondAttribute="trailing" id="E4b-ia-zjt"/>
+                            <constraint firstItem="aoA-H6-cUq" firstAttribute="centerX" secondItem="r1Q-G4-mSr" secondAttribute="centerX" id="PAR-hM-4yR"/>
+                            <constraint firstItem="imC-JT-RLy" firstAttribute="top" secondItem="WPx-oC-gs5" secondAttribute="bottom" id="QPf-Fo-nW9"/>
+                            <constraint firstItem="r1Q-G4-mSr" firstAttribute="bottom" secondItem="aoA-H6-cUq" secondAttribute="bottom" constant="40" id="WXA-cQ-0cT"/>
+                            <constraint firstItem="WPx-oC-gs5" firstAttribute="top" secondItem="d7z-bC-alt" secondAttribute="top" id="tgE-2b-yBZ"/>
+                            <constraint firstItem="aoA-H6-cUq" firstAttribute="top" secondItem="imC-JT-RLy" secondAttribute="bottom" constant="16" id="v28-H5-m7z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="WPx-oC-gs5" id="4N0-ga-yJK"/>
+                        <outlet property="nextBtn" destination="aoA-H6-cUq" id="bq6-VH-ocn"/>
+                        <outlet property="pageControl" destination="imC-JT-RLy" id="nlj-o0-5RH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lq-LV-zdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537.68115942029" y="-514.28571428571422"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ETe-j0-7K8">
             <objects>
@@ -925,7 +1036,7 @@ Walkers walk them</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jei-Mm-3Wz">
-                                <rect key="frame" x="359" y="20" width="35" height="35"/>
+                                <rect key="frame" x="359" y="64" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ehb-Eu-l26"/>
                                     <constraint firstAttribute="width" secondItem="Jei-Mm-3Wz" secondAttribute="height" multiplier="1:1" id="j7P-0H-2Fq"/>
@@ -1121,7 +1232,7 @@ Walkers walk them</string>
         <scene sceneID="gRZ-ci-kIc">
             <objects>
                 <viewController id="imA-f7-Wft" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="IkO-f3-19c">
+                    <view key="view" contentMode="scaleToFill" id="IkO-f3-19c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1143,7 +1254,7 @@ Walkers walk them</string>
                                 <color key="textColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="View Liam's Profile &gt;&gt;&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-Hx-H0O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="View Liam's Profile &gt;&gt;&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-Hx-H0O">
                                 <rect key="frame" x="20" y="283" width="327" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="eTM-lb-LrD"/>
@@ -1152,8 +1263,8 @@ Walkers walk them</string>
                                 <color key="textColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
-                                <rect key="frame" x="16" y="147" width="382" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
+                                <rect key="frame" x="16" y="-822.5" width="382" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YVc-ld-est">
                                         <rect key="frame" x="16" y="8" width="350" height="112"/>
@@ -1229,7 +1340,7 @@ Walkers walk them</string>
                                     <constraint firstAttribute="width" secondItem="z8b-LQ-wjn" secondAttribute="height" multiplier="349:117" id="f9C-cm-2IF"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hs-X2K">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hs-X2K">
                                 <rect key="frame" x="19" y="326" width="374" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="7uu-Ww-NB0"/>
@@ -2586,7 +2697,7 @@ Walkers walk them</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak4-ij-fJW">
-                                <rect key="frame" x="359" y="20" width="35" height="35"/>
+                                <rect key="frame" x="359" y="64" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ak4-ij-fJW" secondAttribute="height" multiplier="1:1" id="7WF-OP-XIU"/>
                                     <constraint firstAttribute="height" constant="35" id="eqA-qy-LQR"/>
@@ -2646,8 +2757,17 @@ Walkers walk them</string>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
