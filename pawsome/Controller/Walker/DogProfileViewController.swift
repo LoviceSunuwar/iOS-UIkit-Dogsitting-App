@@ -30,7 +30,7 @@ class DogProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        setupData()
+//        setupData()
     }
     
     override func viewWillAppear(_ animated: Bool) {

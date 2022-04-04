@@ -167,7 +167,11 @@ class EditProfileViewController: UIViewController {
         profileServices.editProfile(fullName: name, phone: phone, image: imageStr64, experience: experience, isAvailable: isAvailable) { success, message, profile in
             SwiftSpinner.hide()
             if success {
+                guard let profile = profile else {
+                    return
+                }
                 self.alert(message: "Edit Successfully", title: "Success") {
+                    self.delegate?.successfull(profile: profile)
                     self.navigationController?.popViewController(animated: true)
                 }
             } else {

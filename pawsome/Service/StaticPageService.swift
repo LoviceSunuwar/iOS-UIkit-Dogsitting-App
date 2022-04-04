@@ -22,7 +22,7 @@ class StaticPageService {
             
             do {
                 let data = try JSONDecoder().decode(ApiResponse<StaticPage>.self, from: json)
-                completion(data.status, data.message, data.data)
+                completion(data.status ?? false, data.message, data.data)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong", nil)

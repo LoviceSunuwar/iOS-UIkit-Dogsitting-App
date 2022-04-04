@@ -20,17 +20,17 @@ class WalkerDogListViewController: UIViewController {
         return refreshControl
     }()
     
-    var dogs: [Dog] = []
+    var notices: [Notice] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
-        self.getDogs()
+        self.getNoticePost()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = "Dogs' List"
+        navigationItem.title = "Owners' Post"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,11 +48,12 @@ class WalkerDogListViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    private func getDogs() {
-        walkerServices.getAllNoticeListing { success, message in
+    private func getNoticePost() {
+        walkerServices.getAllNoticeListing { success, message, posts in
             self.refreshControl.endRefreshing()
             if success {
-                
+                self.notices = posts
+                self.reloadTableView()
             } else {
                 self.alert(message: message, title: nil, okAction: nil)
             }
@@ -61,25 +62,25 @@ class WalkerDogListViewController: UIViewController {
     
     // MARK: pullToRefresh
     @objc private func pullToRefresh() {
-        getDogs()
+        getNoticePost()
     }
 
 }
 
 extension WalkerDogListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dogs.count
+        return notices.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DogListTableViewCell") as! DogListTableViewCell
-        cell.dog = dogs[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OwnersPostTableViewCell") as! OwnersPostTableViewCell
+        cell.post = notices[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DogProfileViewController") as! DogProfileViewController
-        vc.dog = dogs[indexPath.row]
+//        vc.animal = notices[indexPath.row].animal
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

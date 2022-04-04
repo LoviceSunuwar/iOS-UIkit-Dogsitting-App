@@ -29,8 +29,7 @@ class OwnerService {
         }
     }
     
-    func getAllRequestPosts(completion: @escaping (_ success: Bool, _ message: String, _ owners: [OwnersPost
-                                                                                                 ]) -> ()) {
+    func getAllRequestPosts(completion: @escaping (_ success: Bool, _ message: String, _ owners: [OwnersPost]) -> ()) {
         let url = Configuration.conf.baseURL + "owner/post-request"
         AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
             guard let data = responseData.data else {
