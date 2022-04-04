@@ -1615,7 +1615,7 @@ Walkers walk them</string>
         <scene sceneID="gRZ-ci-kIc">
             <objects>
                 <viewController id="imA-f7-Wft" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="IkO-f3-19c">
+                    <view key="view" contentMode="scaleToFill" id="IkO-f3-19c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1637,17 +1637,14 @@ Walkers walk them</string>
                                 <color key="textColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="View Liam's Profile &gt;&gt;&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-Hx-H0O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="View Liam's Profile &gt;&gt;&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-Hx-H0O">
                                 <rect key="frame" x="20" y="283" width="327" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="eTM-lb-LrD"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
-                                <rect key="frame" x="16" y="73.5" width="382" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
+                                <rect key="frame" x="16" y="80" width="382" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YVc-ld-est">
                                         <rect key="frame" x="16" y="8" width="350" height="112"/>
@@ -1723,7 +1720,7 @@ Walkers walk them</string>
                                     <constraint firstAttribute="width" secondItem="z8b-LQ-wjn" secondAttribute="height" multiplier="349:117" id="f9C-cm-2IF"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hs-X2K">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hs-X2K">
                                 <rect key="frame" x="19" y="326" width="374" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="7uu-Ww-NB0"/>
@@ -1853,19 +1850,18 @@ Walkers walk them</string>
                             <constraint firstItem="xDK-E3-Skn" firstAttribute="trailing" secondItem="ndM-Hx-H0O" secondAttribute="trailing" constant="65.5" id="4Wy-Xf-u2l"/>
                             <constraint firstItem="Bjx-nc-SxI" firstAttribute="trailing" secondItem="xDK-E3-Skn" secondAttribute="trailing" id="DOV-0Q-Tok"/>
                             <constraint firstItem="xDK-E3-Skn" firstAttribute="bottom" secondItem="ndM-Hx-H0O" secondAttribute="bottom" constant="628.5" id="EjF-cp-ggF"/>
-                            <constraint firstItem="ndM-Hx-H0O" firstAttribute="top" secondItem="IkO-f3-19c" secondAttribute="top" constant="302" id="G4U-5A-2Fn"/>
                             <constraint firstItem="w7U-de-9So" firstAttribute="top" secondItem="Bjx-nc-SxI" secondAttribute="bottom" constant="20" id="Gmt-Fv-sm6"/>
-                            <constraint firstItem="Jbv-hs-X2K" firstAttribute="centerX" secondItem="z8b-LQ-wjn" secondAttribute="centerX" id="TVm-yU-vzg"/>
+                            <constraint firstItem="Jbv-hs-X2K" firstAttribute="centerX" secondItem="z8b-LQ-wjn" secondAttribute="centerX" constant="-1" id="TVm-yU-vzg"/>
                             <constraint firstItem="z8b-LQ-wjn" firstAttribute="trailing" secondItem="IkO-f3-19c" secondAttribute="trailingMargin" constant="4" id="U8S-u1-fhl"/>
                             <constraint firstItem="Bjx-nc-SxI" firstAttribute="leading" secondItem="xDK-E3-Skn" secondAttribute="leading" id="XfH-KG-RGx"/>
                             <constraint firstItem="Bjx-nc-SxI" firstAttribute="top" secondItem="xDK-E3-Skn" secondAttribute="top" id="ZeS-Ap-ULP"/>
                             <constraint firstItem="ndM-Hx-H0O" firstAttribute="leading" secondItem="IkO-f3-19c" secondAttribute="leadingMargin" id="aa4-74-dx1"/>
-                            <constraint firstItem="Jbv-hs-X2K" firstAttribute="leading" secondItem="ndM-Hx-H0O" secondAttribute="leading" id="dop-vg-hVB"/>
+                            <constraint firstItem="Jbv-hs-X2K" firstAttribute="leading" secondItem="ndM-Hx-H0O" secondAttribute="leading" constant="-1" id="dop-vg-hVB"/>
                             <constraint firstItem="ndM-Hx-H0O" firstAttribute="top" secondItem="z8b-LQ-wjn" secondAttribute="bottom" constant="8" id="jCw-Vy-kr9"/>
                             <constraint firstItem="w7U-de-9So" firstAttribute="centerX" secondItem="IkO-f3-19c" secondAttribute="centerX" id="mBA-Bf-N55"/>
                             <constraint firstItem="w7U-de-9So" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bjx-nc-SxI" secondAttribute="leading" id="oHk-tu-RLI"/>
                             <constraint firstItem="z8b-LQ-wjn" firstAttribute="leading" secondItem="xDK-E3-Skn" secondAttribute="leading" constant="16" id="wGg-42-ic8"/>
-                            <constraint firstItem="Jbv-hs-X2K" firstAttribute="top" secondItem="ndM-Hx-H0O" secondAttribute="bottom" constant="45" id="xAJ-Oa-Ow5"/>
+                            <constraint firstItem="Jbv-hs-X2K" firstAttribute="top" secondItem="ndM-Hx-H0O" secondAttribute="bottom" constant="19" id="xAJ-Oa-Ow5"/>
                         </constraints>
                     </view>
                 </viewController>
