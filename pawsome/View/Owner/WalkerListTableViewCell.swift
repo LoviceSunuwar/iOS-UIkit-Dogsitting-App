@@ -2,10 +2,11 @@
 //  WalkerListTableViewCell.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 3/31/22.
+//  Created by Roch on 3/31/22.
 //
 
 import UIKit
+import Cosmos
 
 class WalkerListTableViewCell: UITableViewCell {
 
@@ -13,8 +14,9 @@ class WalkerListTableViewCell: UITableViewCell {
     @IBOutlet weak var walkerImageView: UIImageView!
     @IBOutlet weak var walkerLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var ratingView: CosmosView!
     
-    var walker: Walker! {
+    var walker: Profile! {
         didSet {
             setupData()
         }
@@ -32,8 +34,10 @@ class WalkerListTableViewCell: UITableViewCell {
     }
     
     private func setupData() {
-        walkerLabel.text = walker.fullName
-        bioLabel.text = walker.experience
+        walkerLabel.text = walker.name
+        bioLabel.text = "\(walker.experience ?? 0) years experience"
+        ratingView.rating = walker.average_rating ?? 0
+        walkerImageView.setImage(urlString: walker.formatted_image_url)
     }
 
 }

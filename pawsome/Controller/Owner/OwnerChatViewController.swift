@@ -2,7 +2,7 @@
 //  OwnerChatViewController.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 3/31/22.
+//  Created by Roch on 3/31/22.
 //
 
 import UIKit
@@ -22,6 +22,16 @@ class OwnerChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Chats"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.title = ""
     }
     
     private func setupViews() {

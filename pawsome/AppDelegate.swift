@@ -2,12 +2,13 @@
 //  AppDelegate.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 3/22/22.
+//  Created by Roch on 3/22/22.
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
-let deploymentMode: DeploymentMode = .uat
+let deploymentMode: DeploymentMode = .live
 
 var appDelegate: AppDelegate {
     return (UIApplication.shared.delegate as! AppDelegate)
@@ -21,14 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        
-//        if NSLoginManager.isLoggedIn() {
-//            if NSLoginManager.isOwner() {
-//                goToOwnerDashboardPage()
-//            } else {
-//                goToWalkerDashboardPage()
-//            }
-//        }
+        IQKeyboardManager.shared.enable = true
+        if !(GlobalConstants.KeyValues.isOnboardingPreviouslyOpened ?? false) {
+            goToOnboardingViewControllerPage()
+        } else if NSLoginManager.isLoggedIn() {
+            switch GlobalConstants.KeyValues.userType ?? .owner {
+            case .owner:
+                goToOwnerDashboardPage()
+            case .walker:
+                goToWalkerDashboardPage()
+            }
+        } else {
+            goToWalkthroughNavigationControllerPage()
+        }
         return true
     }
     
@@ -59,6 +65,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func goToWalkthroughNavigationControllerPage(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "WalkthroughNavigationController") as! UINavigationController
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func goToOnboardingViewControllerPage() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }

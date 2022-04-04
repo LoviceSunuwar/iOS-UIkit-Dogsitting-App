@@ -2,7 +2,7 @@
 //  String+Extension.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 3/31/22.
+//  Created by Roch on 3/31/22.
 //
 
 import Foundation
@@ -24,5 +24,18 @@ extension String {
         let phoneRegEx = "9+[0-9]{9}"
         let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
         return phoneTest.evaluate(with: self)
+    }
+    
+    var htmlToAttributedString: NSAttributedString? {
+        guard let data = data(using: .utf8) else { return nil }
+        do {
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            return nil
+        }
+    }
+    
+    var htmlToString: String {
+        return htmlToAttributedString?.string ?? ""
     }
 }

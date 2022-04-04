@@ -2,7 +2,7 @@
 //  ViewController+Extension.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 3/31/22.
+//  Created by Roch on 3/31/22.
 //
 
 import UIKit
@@ -10,6 +10,13 @@ import UIKit
 extension UIViewController {
     var window: UIWindow? {
         return (UIApplication.shared.delegate as! AppDelegate).window
+    }
+    
+    func presentFullScreen(_ viewController: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
+        if #available(iOS 13.0, *) {
+            viewController.modalPresentationStyle = .fullScreen
+        }
+        self.present(viewController, animated: animated, completion: completion)
     }
     
     func alert(message: String?, title: String? = nil, okAction: (()->())? = nil) {

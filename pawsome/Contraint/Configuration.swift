@@ -2,7 +2,7 @@
 //  Configuration.swift
 //  pawsome
 //
-//  Created by Nhuja Shakya on 3/28/22.
+//  Created by Roch on 3/28/22.
 //
 
 import Foundation
@@ -31,6 +31,8 @@ struct Configuration {
         case .uat:
             return Configuration(
                 baseURL: "https://pawsome-server.herokuapp.com/api/")
+        case .live:
+            return Configuration(baseURL: "https://pawsome.roch.com.np/api/")
         default:
             return Configuration(
                 baseURL: "https://pawsome-server.herokuapp.com/api/")

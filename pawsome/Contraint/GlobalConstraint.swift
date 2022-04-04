@@ -2,28 +2,29 @@
 //  GlobalConstraint.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 3/22/22.
+//  Created by Roch on 3/22/22.
 //
 
 import Foundation
 
 struct GlobalConstants {
     struct KeyValues {
-        static var isWalkthroughPreviouslyOpened: Bool? {
+        static var isOnboardingPreviouslyOpened: Bool? {
             get {
-                return UserDefaults.standard.bool(forKey: GlobalConstants.UserDefaultKey.isWalkthroughPreviouslyOpened)
+                return UserDefaults.standard.bool(forKey: GlobalConstants.UserDefaultKey.isOnboardingPreviouslyOpened)
             }
             set {
-                UserDefaults.standard.set(newValue, forKey: GlobalConstants.UserDefaultKey.isWalkthroughPreviouslyOpened)
+                UserDefaults.standard.set(newValue, forKey: GlobalConstants.UserDefaultKey.isOnboardingPreviouslyOpened)
             }
         }
         
-        static var isOwner: Bool? {
+        static var userType: EUserType? {
             get {
-                return UserDefaults.standard.bool(forKey: GlobalConstants.UserDefaultKey.isOwner)
+                let intValue = UserDefaults.standard.integer(forKey: GlobalConstants.UserDefaultKey.eUserType)
+                return EUserType.init(rawValue: intValue)
             }
             set {
-                UserDefaults.standard.set(newValue, forKey: GlobalConstants.UserDefaultKey.isOwner)
+                UserDefaults.standard.set(newValue?.rawValue, forKey: GlobalConstants.UserDefaultKey.eUserType)
             }
         }
         
@@ -39,8 +40,8 @@ struct GlobalConstants {
     
     // MARK: UserDefaultKey
     struct UserDefaultKey {
-        static let isWalkthroughPreviouslyOpened = "isWalkthroughPreviouslyOpened"
-        static let isOwner = "isOwner"
+        static let isOnboardingPreviouslyOpened = "isOnboardingPreviouslyOpened"
         static let token = "apiToken"
+        static let eUserType = "user_type"
     }
 }

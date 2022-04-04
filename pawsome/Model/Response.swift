@@ -9,8 +9,10 @@ import Foundation
 
 struct ApiResponse<T: Codable>: Codable {
     
-    var isSuccess: Bool
+    var status: Bool
     var data: T?
     var message: String
+    var token: String?
+    var status_code: Int
 }
 

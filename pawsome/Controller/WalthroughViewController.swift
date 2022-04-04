@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 3/22/22.
+//  Created by Roch on 3/22/22.
 //
 
 import UIKit
@@ -21,17 +21,17 @@ class WalthroughViewController: UIViewController {
     }
 
     @IBAction func ownerButtonTapped(_ sender: Any) {
-        goToLogin(isOwner: true)
+        goToLogin(userType: .owner)
     }
     
     @IBAction func walkerButtonTapped(_ sender: Any) {
-        goToLogin(isOwner: false)
+        goToLogin(userType: .walker)
     }
     
     
-    func goToLogin(isOwner: Bool) {
+    func goToLogin(userType: EUserType) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        GlobalConstants.KeyValues.isOwner = isOwner
+        GlobalConstants.KeyValues.userType = userType
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

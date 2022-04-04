@@ -2,7 +2,7 @@
 //  WalkerListViewController.swift
 //  Pawsome
 //
-//  Created by Nhuja Shakya on 3/31/22.
+//  Created by Roch on 3/31/22.
 //
 
 import UIKit
@@ -19,7 +19,7 @@ class WalkerListViewController: UIViewController {
     }()
     
     var walkerService = WalkerService()
-    var walkers: [Walker] = []
+    var walkers: [Profile] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,16 @@ class WalkerListViewController: UIViewController {
         self.getWalkers()
         
 //        [[UILabel appearance] setFont:[UIFont fontWithName:@"Ubuntu-Regular" size:17.0]];
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Walkers' List"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.title = ""
     }
     
     private func setupTableView() {

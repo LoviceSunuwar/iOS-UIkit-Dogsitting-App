@@ -10,4 +10,6 @@ target 'Pawsome' do
  pod 'SwiftyJSON'
  pod 'SwiftSpinner', :inhibit_warnings => true
  pod 'AlamofireImage'
+pod 'IQKeyboardManagerSwift'
+pod 'Cosmos', '~> 23.0'
 end

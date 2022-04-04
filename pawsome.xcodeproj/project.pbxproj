@@ -31,14 +31,9 @@
 		D534199E27F60EA3006411E4 /* WalkerConfirmWalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534199D27F60EA3006411E4 /* WalkerConfirmWalkTableViewCell.swift */; };
 		D53BEAFA27F56C3A00201220 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEAF927F56C3A00201220 /* Configuration.swift */; };
 		D53BEB0127F56C4C00201220 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEAFB27F56C4B00201220 /* Response.swift */; };
-		D53BEB0227F56C4C00201220 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEAFC27F56C4B00201220 /* Token.swift */; };
-		D53BEB0427F56C4C00201220 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEAFE27F56C4B00201220 /* Owner.swift */; };
-		D53BEB0527F56C4C00201220 /* Walker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEAFF27F56C4B00201220 /* Walker.swift */; };
 		D53BEB0627F56C4C00201220 /* OwnersPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB0027F56C4B00201220 /* OwnersPost.swift */; };
 		D53BEB0F27F577FF00201220 /* NSLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB0D27F577FF00201220 /* NSLoginManager.swift */; };
 		D53BEB1027F577FF00201220 /* NSUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB0E27F577FF00201220 /* NSUserDefault.swift */; };
-		D53BEB1227F57F8500201220 /* OwnerMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB1127F57F8500201220 /* OwnerMoreViewController.swift */; };
-		D53BEB1427F581ED00201220 /* WalkerMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB1327F581ED00201220 /* WalkerMoreViewController.swift */; };
 		D53BEB1627F5848400201220 /* WalkerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB1527F5848400201220 /* WalkerListViewController.swift */; };
 		D53BEB1827F5859900201220 /* WalkerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB1727F5859900201220 /* WalkerListTableViewCell.swift */; };
 		D53BEB2427F5A84100201220 /* WalkerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB2327F5A84100201220 /* WalkerProfileViewController.swift */; };
@@ -49,6 +44,13 @@
 		D53BEB2E27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */; };
 		D53BEB3027F5B3DD00201220 /* ConfirmWalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB2F27F5B3DD00201220 /* ConfirmWalkTableViewCell.swift */; };
 		D588E8BC27EAF70E00599370 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588E8BB27EAF70E00599370 /* LoginViewController.swift */; };
+		D594E92527FA19EE000214EC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594E92427FA19EE000214EC /* EditProfileViewController.swift */; };
+		D594E92727FA1D74000214EC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594E92627FA1D74000214EC /* ImagePicker.swift */; };
+		D594E92927FA313F000214EC /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594E92827FA313F000214EC /* Animal.swift */; };
+		D594E92B27FA31E9000214EC /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594E92A27FA31E9000214EC /* Notice.swift */; };
+		D5B5E49627FA03C500ED567E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E49527FA03C500ED567E /* ProfileViewController.swift */; };
+		D5B5E49827FA108A00ED567E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E49727FA108A00ED567E /* ChangePasswordViewController.swift */; };
+		D5B5E49A27FA13C100ED567E /* WalkersProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E49927FA13C100ED567E /* WalkersProfileViewController.swift */; };
 		D5B8C20C27F55DFF00A8271D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8C20B27F55DFF00A8271D /* CustomTextField.swift */; };
 		D5B8C20E27F55EBB00A8271D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8C20D27F55EBB00A8271D /* UIView+Extension.swift */; };
 		D5B8C21127F562AF00A8271D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8C21027F562AF00A8271D /* String+Extension.swift */; };
@@ -57,6 +59,14 @@
 		D5B8C21927F56B7500A8271D /* WalkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8C21727F56B7500A8271D /* WalkerService.swift */; };
 		D5B8C21A27F56B7500A8271D /* OwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8C21827F56B7500A8271D /* OwnerService.swift */; };
 		D5F6F14E27ECC988003A343C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6F14D27ECC988003A343C /* SignupViewController.swift */; };
+		D5FE28E327F9B5D800B1EAF1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE28E227F9B5D800B1EAF1 /* LoginService.swift */; };
+		D5FE28E527F9B64200B1EAF1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE28E427F9B64200B1EAF1 /* Profile.swift */; };
+		D5FE28E727F9BD8E00B1EAF1 /* Session+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE28E627F9BD8E00B1EAF1 /* Session+Extension.swift */; };
+		D5FE28E927F9BDD500B1EAF1 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE28E827F9BDD500B1EAF1 /* RegisterService.swift */; };
+		D5FE28EB27F9C1FB00B1EAF1 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE28EA27F9C1FB00B1EAF1 /* ProfileService.swift */; };
+		D5FE28ED27F9C5D300B1EAF1 /* StaticPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE28EC27F9C5D300B1EAF1 /* StaticPage.swift */; };
+		D5FE28EF27F9C61900B1EAF1 /* StaticPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE28EE27F9C61900B1EAF1 /* StaticPageService.swift */; };
+		D5FE28F127F9C8B700B1EAF1 /* StaticPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE28F027F9C8B700B1EAF1 /* StaticPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,14 +97,9 @@
 		D534199D27F60EA3006411E4 /* WalkerConfirmWalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerConfirmWalkTableViewCell.swift; sourceTree = "<group>"; };
 		D53BEAF927F56C3A00201220 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		D53BEAFB27F56C4B00201220 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		D53BEAFC27F56C4B00201220 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		D53BEAFE27F56C4B00201220 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
-		D53BEAFF27F56C4B00201220 /* Walker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Walker.swift; sourceTree = "<group>"; };
 		D53BEB0027F56C4B00201220 /* OwnersPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnersPost.swift; sourceTree = "<group>"; };
 		D53BEB0D27F577FF00201220 /* NSLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLoginManager.swift; sourceTree = "<group>"; };
 		D53BEB0E27F577FF00201220 /* NSUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefault.swift; sourceTree = "<group>"; };
-		D53BEB1127F57F8500201220 /* OwnerMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMoreViewController.swift; sourceTree = "<group>"; };
-		D53BEB1327F581ED00201220 /* WalkerMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerMoreViewController.swift; sourceTree = "<group>"; };
 		D53BEB1527F5848400201220 /* WalkerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerListViewController.swift; sourceTree = "<group>"; };
 		D53BEB1727F5859900201220 /* WalkerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerListTableViewCell.swift; sourceTree = "<group>"; };
 		D53BEB2327F5A84100201220 /* WalkerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkerProfileViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +110,13 @@
 		D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerConfirmWalkViewController.swift; sourceTree = "<group>"; };
 		D53BEB2F27F5B3DD00201220 /* ConfirmWalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmWalkTableViewCell.swift; sourceTree = "<group>"; };
 		D588E8BB27EAF70E00599370 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D594E92427FA19EE000214EC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		D594E92627FA1D74000214EC /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D594E92827FA313F000214EC /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		D594E92A27FA31E9000214EC /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		D5B5E49527FA03C500ED567E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D5B5E49727FA108A00ED567E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		D5B5E49927FA13C100ED567E /* WalkersProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkersProfileViewController.swift; sourceTree = "<group>"; };
 		D5B8C20B27F55DFF00A8271D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D5B8C20D27F55EBB00A8271D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		D5B8C21027F562AF00A8271D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -113,6 +125,14 @@
 		D5B8C21727F56B7500A8271D /* WalkerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkerService.swift; sourceTree = "<group>"; };
 		D5B8C21827F56B7500A8271D /* OwnerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerService.swift; sourceTree = "<group>"; };
 		D5F6F14D27ECC988003A343C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		D5FE28E227F9B5D800B1EAF1 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D5FE28E427F9B64200B1EAF1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		D5FE28E627F9BD8E00B1EAF1 /* Session+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+Extension.swift"; sourceTree = "<group>"; };
+		D5FE28E827F9BDD500B1EAF1 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		D5FE28EA27F9C1FB00B1EAF1 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		D5FE28EC27F9C5D300B1EAF1 /* StaticPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPage.swift; sourceTree = "<group>"; };
+		D5FE28EE27F9C61900B1EAF1 /* StaticPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPageService.swift; sourceTree = "<group>"; };
+		D5FE28F027F9C8B700B1EAF1 /* StaticPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPageViewController.swift; sourceTree = "<group>"; };
 		DC09222D46D6E2044389EBDF /* Pods-Pawsome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pawsome.release.xcconfig"; path = "Target Support Files/Pods-Pawsome/Pods-Pawsome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */,
-				5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -185,13 +204,14 @@
 		D526C9E227E984860079DBDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D53BEAFE27F56C4B00201220 /* Owner.swift */,
 				D53BEB0027F56C4B00201220 /* OwnersPost.swift */,
 				D53BEAFB27F56C4B00201220 /* Response.swift */,
-				D53BEAFC27F56C4B00201220 /* Token.swift */,
-				D53BEAFF27F56C4B00201220 /* Walker.swift */,
 				D534198927F5F558006411E4 /* Dog.swift */,
 				5BF793DD27F9557200D70107 /* OnboardingSlide.swift */,
+				D5FE28E427F9B64200B1EAF1 /* Profile.swift */,
+				D5FE28EC27F9C5D300B1EAF1 /* StaticPage.swift */,
+				D594E92827FA313F000214EC /* Animal.swift */,
+				D594E92A27FA31E9000214EC /* Notice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +219,7 @@
 		D526C9E327E9848B0079DBDD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */,
 				D534198B27F5F8AC006411E4 /* Owner */,
 				D534198C27F5F8B9006411E4 /* Walker */,
 				D5B8C20A27F55DE800A8271D /* Custom */,
@@ -215,6 +236,9 @@
 				D526C9D227E981730079DBDD /* WalthroughViewController.swift */,
 				D588E8BB27EAF70E00599370 /* LoginViewController.swift */,
 				D5F6F14D27ECC988003A343C /* SignupViewController.swift */,
+				D5FE28F027F9C8B700B1EAF1 /* StaticPageViewController.swift */,
+				D5B5E49727FA108A00ED567E /* ChangePasswordViewController.swift */,
+				D594E92427FA19EE000214EC /* EditProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,22 +283,15 @@
 			path = Walker;
 			sourceTree = "<group>";
 		};
-		D53BEB0727F56CFA00201220 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		D53BEB0A27F5761B00201220 /* Walker */ = {
 			isa = PBXGroup;
 			children = (
-				D53BEB1327F581ED00201220 /* WalkerMoreViewController.swift */,
 				D534198727F5F44C006411E4 /* WalkerDogListViewController.swift */,
 				D534199127F5FC02006411E4 /* DogProfileViewController.swift */,
 				D534199527F60167006411E4 /* WalkerChatViewController.swift */,
 				D534199927F609E9006411E4 /* WalkerRequestViewController.swift */,
 				D534199B27F60E6D006411E4 /* WalkerConfirmWalkViewController.swift */,
+				D5B5E49927FA13C100ED567E /* WalkersProfileViewController.swift */,
 			);
 			path = Walker;
 			sourceTree = "<group>";
@@ -282,12 +299,12 @@
 		D53BEB0B27F5762000201220 /* Owner */ = {
 			isa = PBXGroup;
 			children = (
-				D53BEB1127F57F8500201220 /* OwnerMoreViewController.swift */,
 				D53BEB1527F5848400201220 /* WalkerListViewController.swift */,
 				D53BEB2327F5A84100201220 /* WalkerProfileViewController.swift */,
 				D53BEB2527F5AC5600201220 /* OwnerChatViewController.swift */,
 				D53BEB2B27F5B15500201220 /* OwnerRequestViewController.swift */,
 				D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */,
+				D5B5E49527FA03C500ED567E /* ProfileViewController.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -297,6 +314,7 @@
 			children = (
 				D53BEB0D27F577FF00201220 /* NSLoginManager.swift */,
 				D53BEB0E27F577FF00201220 /* NSUserDefault.swift */,
+				D594E92627FA1D74000214EC /* ImagePicker.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -317,6 +335,7 @@
 				D5B8C21227F5638500A8271D /* ViewController+Extension.swift */,
 				D5B8C21427F56A5100A8271D /* UIColor+Extension.swift */,
 				D534198F27F5FAD9006411E4 /* UIImageView+Extension.swift */,
+				D5FE28E627F9BD8E00B1EAF1 /* Session+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,9 +343,12 @@
 		D5B8C21627F56B7500A8271D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				D53BEB0727F56CFA00201220 /* New Group */,
 				D5B8C21727F56B7500A8271D /* WalkerService.swift */,
 				D5B8C21827F56B7500A8271D /* OwnerService.swift */,
+				D5FE28E227F9B5D800B1EAF1 /* LoginService.swift */,
+				D5FE28E827F9BDD500B1EAF1 /* RegisterService.swift */,
+				D5FE28EA27F9C1FB00B1EAF1 /* ProfileService.swift */,
+				D5FE28EE27F9C61900B1EAF1 /* StaticPageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -464,35 +486,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D594E92527FA19EE000214EC /* EditProfileViewController.swift in Sources */,
 				D53BEB2427F5A84100201220 /* WalkerProfileViewController.swift in Sources */,
 				D5B8C21127F562AF00A8271D /* String+Extension.swift in Sources */,
 				D53BEB2827F5AD5000201220 /* OwnerChatTableViewCell.swift in Sources */,
 				D588E8BC27EAF70E00599370 /* LoginViewController.swift in Sources */,
-				D53BEB1227F57F8500201220 /* OwnerMoreViewController.swift in Sources */,
+				D5FE28EF27F9C61900B1EAF1 /* StaticPageService.swift in Sources */,
 				D534198A27F5F558006411E4 /* Dog.swift in Sources */,
 				D534198827F5F44C006411E4 /* WalkerDogListViewController.swift in Sources */,
+				D5B5E49A27FA13C100ED567E /* WalkersProfileViewController.swift in Sources */,
 				D53BEB0F27F577FF00201220 /* NSLoginManager.swift in Sources */,
+				D594E92B27FA31E9000214EC /* Notice.swift in Sources */,
+				D5FE28E527F9B64200B1EAF1 /* Profile.swift in Sources */,
+				D5FE28EB27F9C1FB00B1EAF1 /* ProfileService.swift in Sources */,
 				D53BEB0627F56C4C00201220 /* OwnersPost.swift in Sources */,
 				D526C9D327E981730079DBDD /* WalthroughViewController.swift in Sources */,
 				D534198E27F5F8D8006411E4 /* DogListTableViewCell.swift in Sources */,
+				D5FE28E927F9BDD500B1EAF1 /* RegisterService.swift in Sources */,
 				D5B8C20C27F55DFF00A8271D /* CustomTextField.swift in Sources */,
+				D594E92927FA313F000214EC /* Animal.swift in Sources */,
 				D534199827F60961006411E4 /* WalkerRequestTableViewCell.swift in Sources */,
+				D5FE28E327F9B5D800B1EAF1 /* LoginService.swift in Sources */,
 				D5B8C20E27F55EBB00A8271D /* UIView+Extension.swift in Sources */,
 				D53BEB2C27F5B15500201220 /* OwnerRequestViewController.swift in Sources */,
 				D534199427F600F3006411E4 /* WalkerChatTableViewCell.swift in Sources */,
 				D5B8C21A27F56B7500A8271D /* OwnerService.swift in Sources */,
 				5BF793E127F958DF00D70107 /* OnboardingCollectionViewCell.swift in Sources */,
 				D53BEB2E27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift in Sources */,
-				D53BEB0227F56C4C00201220 /* Token.swift in Sources */,
+				D5B5E49627FA03C500ED567E /* ProfileViewController.swift in Sources */,
 				D53BEB0127F56C4C00201220 /* Response.swift in Sources */,
 				D5B8C21327F5638500A8271D /* ViewController+Extension.swift in Sources */,
 				D53BEAFA27F56C3A00201220 /* Configuration.swift in Sources */,
-				D53BEB1427F581ED00201220 /* WalkerMoreViewController.swift in Sources */,
 				D5F6F14E27ECC988003A343C /* SignupViewController.swift in Sources */,
 				D534199C27F60E6D006411E4 /* WalkerConfirmWalkViewController.swift in Sources */,
 				D53BEB2627F5AC5600201220 /* OwnerChatViewController.swift in Sources */,
+				D5FE28ED27F9C5D300B1EAF1 /* StaticPage.swift in Sources */,
 				D5B8C21927F56B7500A8271D /* WalkerService.swift in Sources */,
-				D53BEB0527F56C4C00201220 /* Walker.swift in Sources */,
+				D5FE28E727F9BD8E00B1EAF1 /* Session+Extension.swift in Sources */,
 				5BF793DC27F9490D00D70107 /* OnboardingViewController.swift in Sources */,
 				D526C9E827E985150079DBDD /* GlobalConstraint.swift in Sources */,
 				D53BEB2A27F5B07A00201220 /* OwnerRequestTableViewCell.swift in Sources */,
@@ -501,13 +531,15 @@
 				D534199E27F60EA3006411E4 /* WalkerConfirmWalkTableViewCell.swift in Sources */,
 				D534199A27F609E9006411E4 /* WalkerRequestViewController.swift in Sources */,
 				D53BEB3027F5B3DD00201220 /* ConfirmWalkTableViewCell.swift in Sources */,
-				D53BEB0427F56C4C00201220 /* Owner.swift in Sources */,
 				D534199027F5FAD9006411E4 /* UIImageView+Extension.swift in Sources */,
 				D534199227F5FC02006411E4 /* DogProfileViewController.swift in Sources */,
+				D5B5E49827FA108A00ED567E /* ChangePasswordViewController.swift in Sources */,
 				D526C9CF27E981730079DBDD /* AppDelegate.swift in Sources */,
+				D5FE28F127F9C8B700B1EAF1 /* StaticPageViewController.swift in Sources */,
 				D53BEB1827F5859900201220 /* WalkerListTableViewCell.swift in Sources */,
 				D53BEB1027F577FF00201220 /* NSUserDefault.swift in Sources */,
 				D534199627F60167006411E4 /* WalkerChatViewController.swift in Sources */,
+				D594E92727FA1D74000214EC /* ImagePicker.swift in Sources */,
 				D5B8C21527F56A5100A8271D /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
