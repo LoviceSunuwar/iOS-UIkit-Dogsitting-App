@@ -11,6 +11,7 @@
 		5B1E8EEE27FAAD95008C94B6 /* WalkRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E8EED27FAAD95008C94B6 /* WalkRequestService.swift */; };
 		5B1E8EF027FAB1A1008C94B6 /* WalkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E8EEF27FAB1A1008C94B6 /* WalkRequest.swift */; };
 		5B8FA74227FA9AE80053E6AD /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FA74127FA9AE80053E6AD /* AnimalService.swift */; };
+		5BC6D8E727FBA6E7005EB425 /* Common+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6D8E627FBA6E7005EB425 /* Common+Extension.swift */; };
 		5BF793DC27F9490D00D70107 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */; };
 		5BF793DE27F9557300D70107 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793DD27F9557200D70107 /* OnboardingSlide.swift */; };
 		5BF793E127F958DF00D70107 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */; };
@@ -80,6 +81,7 @@
 		5B1E8EED27FAAD95008C94B6 /* WalkRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkRequestService.swift; sourceTree = "<group>"; };
 		5B1E8EEF27FAB1A1008C94B6 /* WalkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkRequest.swift; sourceTree = "<group>"; };
 		5B8FA74127FA9AE80053E6AD /* AnimalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
+		5BC6D8E627FBA6E7005EB425 /* Common+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common+Extension.swift"; sourceTree = "<group>"; };
 		5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5BF793DD27F9557200D70107 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				D5B8C21427F56A5100A8271D /* UIColor+Extension.swift */,
 				D534198F27F5FAD9006411E4 /* UIImageView+Extension.swift */,
 				D5FE28E627F9BD8E00B1EAF1 /* Session+Extension.swift */,
+				5BC6D8E627FBA6E7005EB425 /* Common+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -422,7 +425,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D526C9C627E981730079DBDD /* Build configuration list for PBXProject "pawsome" */;
+			buildConfigurationList = D526C9C627E981730079DBDD /* Build configuration list for PBXProject "Pawsome" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -550,6 +553,7 @@
 				D534199E27F60EA3006411E4 /* WalkerConfirmWalkTableViewCell.swift in Sources */,
 				D534199A27F609E9006411E4 /* WalkerRequestViewController.swift in Sources */,
 				D53BEB3027F5B3DD00201220 /* ConfirmWalkTableViewCell.swift in Sources */,
+				5BC6D8E727FBA6E7005EB425 /* Common+Extension.swift in Sources */,
 				D534199027F5FAD9006411E4 /* UIImageView+Extension.swift in Sources */,
 				D534199227F5FC02006411E4 /* DogProfileViewController.swift in Sources */,
 				D5B5E49827FA108A00ED567E /* ChangePasswordViewController.swift in Sources */,
@@ -763,7 +767,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D526C9C627E981730079DBDD /* Build configuration list for PBXProject "pawsome" */ = {
+		D526C9C627E981730079DBDD /* Build configuration list for PBXProject "Pawsome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D526C9DD27E981740079DBDD /* Debug */,

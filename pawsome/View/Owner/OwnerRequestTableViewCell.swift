@@ -21,6 +21,12 @@ class OwnerRequestTableViewCell: UITableViewCell {
     
     @IBOutlet weak var statusLabel: UILabel!
     
+    var walkRequest: WalkRequest! {
+        didSet {
+            setupData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,7 +38,9 @@ class OwnerRequestTableViewCell: UITableViewCell {
     }
     
     private func setupData() {
-        
+        titleLabel.text = "You’ve requested \(String(describing: walkRequest.animal?.animal_name ?? "") ) for a walk."
+        amountLabel.isHidden = true
+        statusLabel.text = (walkRequest.owner_approved_at?.isEmpty ?? true) && (walkRequest.owner_rejected_at?.isEmpty ?? true) ? "Pending" : !(walkRequest.owner_approved_at?.isEmpty ?? true) ? "Approved" : "Declined"
     }
 
 }

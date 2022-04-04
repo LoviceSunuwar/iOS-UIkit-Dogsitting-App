@@ -64,6 +64,6 @@ class WalkerProfileViewController: UIViewController {
     }
     
     @IBAction func sendWalkRequestButtonTapped(_ sender: Any) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
 }
