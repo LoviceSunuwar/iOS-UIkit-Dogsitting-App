@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1E8EEC27FAA8A7008C94B6 /* NoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E8EEB27FAA8A7008C94B6 /* NoticeService.swift */; };
+		5B1E8EEE27FAAD95008C94B6 /* WalkRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E8EED27FAAD95008C94B6 /* WalkRequestService.swift */; };
+		5B1E8EF027FAB1A1008C94B6 /* WalkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E8EEF27FAB1A1008C94B6 /* WalkRequest.swift */; };
+		5B8FA74227FA9AE80053E6AD /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FA74127FA9AE80053E6AD /* AnimalService.swift */; };
 		5BF793DC27F9490D00D70107 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */; };
 		5BF793DE27F9557300D70107 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793DD27F9557200D70107 /* OnboardingSlide.swift */; };
 		5BF793E127F958DF00D70107 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */; };
@@ -43,6 +47,7 @@
 		D53BEB2C27F5B15500201220 /* OwnerRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB2B27F5B15500201220 /* OwnerRequestViewController.swift */; };
 		D53BEB2E27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */; };
 		D53BEB3027F5B3DD00201220 /* ConfirmWalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB2F27F5B3DD00201220 /* ConfirmWalkTableViewCell.swift */; };
+		D53DE7B327FA8F31008E8DB0 /* OwnersPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DE7B227FA8F31008E8DB0 /* OwnersPostTableViewCell.swift */; };
 		D588E8BC27EAF70E00599370 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588E8BB27EAF70E00599370 /* LoginViewController.swift */; };
 		D594E92527FA19EE000214EC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594E92427FA19EE000214EC /* EditProfileViewController.swift */; };
 		D594E92727FA1D74000214EC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594E92627FA1D74000214EC /* ImagePicker.swift */; };
@@ -71,6 +76,10 @@
 
 /* Begin PBXFileReference section */
 		22855855E3C6546DA3154897 /* Pods-Pawsome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pawsome.debug.xcconfig"; path = "Target Support Files/Pods-Pawsome/Pods-Pawsome.debug.xcconfig"; sourceTree = "<group>"; };
+		5B1E8EEB27FAA8A7008C94B6 /* NoticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeService.swift; sourceTree = "<group>"; };
+		5B1E8EED27FAAD95008C94B6 /* WalkRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkRequestService.swift; sourceTree = "<group>"; };
+		5B1E8EEF27FAB1A1008C94B6 /* WalkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkRequest.swift; sourceTree = "<group>"; };
+		5B8FA74127FA9AE80053E6AD /* AnimalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
 		5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5BF793DD27F9557200D70107 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +118,7 @@
 		D53BEB2B27F5B15500201220 /* OwnerRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerRequestViewController.swift; sourceTree = "<group>"; };
 		D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerConfirmWalkViewController.swift; sourceTree = "<group>"; };
 		D53BEB2F27F5B3DD00201220 /* ConfirmWalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmWalkTableViewCell.swift; sourceTree = "<group>"; };
+		D53DE7B227FA8F31008E8DB0 /* OwnersPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersPostTableViewCell.swift; sourceTree = "<group>"; };
 		D588E8BB27EAF70E00599370 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D594E92427FA19EE000214EC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		D594E92627FA1D74000214EC /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -212,6 +222,7 @@
 				D5FE28EC27F9C5D300B1EAF1 /* StaticPage.swift */,
 				D594E92827FA313F000214EC /* Animal.swift */,
 				D594E92A27FA31E9000214EC /* Notice.swift */,
+				5B1E8EEF27FAB1A1008C94B6 /* WalkRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +290,7 @@
 				D534199327F600F3006411E4 /* WalkerChatTableViewCell.swift */,
 				D534199727F60961006411E4 /* WalkerRequestTableViewCell.swift */,
 				D534199D27F60EA3006411E4 /* WalkerConfirmWalkTableViewCell.swift */,
+				D53DE7B227FA8F31008E8DB0 /* OwnersPostTableViewCell.swift */,
 			);
 			path = Walker;
 			sourceTree = "<group>";
@@ -349,6 +361,9 @@
 				D5FE28E827F9BDD500B1EAF1 /* RegisterService.swift */,
 				D5FE28EA27F9C1FB00B1EAF1 /* ProfileService.swift */,
 				D5FE28EE27F9C61900B1EAF1 /* StaticPageService.swift */,
+				5B8FA74127FA9AE80053E6AD /* AnimalService.swift */,
+				5B1E8EEB27FAA8A7008C94B6 /* NoticeService.swift */,
+				5B1E8EED27FAAD95008C94B6 /* WalkRequestService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -503,8 +518,10 @@
 				D526C9D327E981730079DBDD /* WalthroughViewController.swift in Sources */,
 				D534198E27F5F8D8006411E4 /* DogListTableViewCell.swift in Sources */,
 				D5FE28E927F9BDD500B1EAF1 /* RegisterService.swift in Sources */,
+				5B8FA74227FA9AE80053E6AD /* AnimalService.swift in Sources */,
 				D5B8C20C27F55DFF00A8271D /* CustomTextField.swift in Sources */,
 				D594E92927FA313F000214EC /* Animal.swift in Sources */,
+				5B1E8EF027FAB1A1008C94B6 /* WalkRequest.swift in Sources */,
 				D534199827F60961006411E4 /* WalkerRequestTableViewCell.swift in Sources */,
 				D5FE28E327F9B5D800B1EAF1 /* LoginService.swift in Sources */,
 				D5B8C20E27F55EBB00A8271D /* UIView+Extension.swift in Sources */,
@@ -513,6 +530,8 @@
 				D5B8C21A27F56B7500A8271D /* OwnerService.swift in Sources */,
 				5BF793E127F958DF00D70107 /* OnboardingCollectionViewCell.swift in Sources */,
 				D53BEB2E27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift in Sources */,
+				5B1E8EEC27FAA8A7008C94B6 /* NoticeService.swift in Sources */,
+				5B1E8EEE27FAAD95008C94B6 /* WalkRequestService.swift in Sources */,
 				D5B5E49627FA03C500ED567E /* ProfileViewController.swift in Sources */,
 				D53BEB0127F56C4C00201220 /* Response.swift in Sources */,
 				D5B8C21327F5638500A8271D /* ViewController+Extension.swift in Sources */,
@@ -541,6 +560,7 @@
 				D534199627F60167006411E4 /* WalkerChatViewController.swift in Sources */,
 				D594E92727FA1D74000214EC /* ImagePicker.swift in Sources */,
 				D5B8C21527F56A5100A8271D /* UIColor+Extension.swift in Sources */,
+				D53DE7B327FA8F31008E8DB0 /* OwnersPostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +710,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4N332A7XBB;
+				DEVELOPMENT_TEAM = P7Y559NK43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pawsome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -703,7 +723,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rochBajracharya.Pawsome;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.friends-group.Pawsome";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -719,7 +739,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4N332A7XBB;
+				DEVELOPMENT_TEAM = P7Y559NK43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pawsome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -732,7 +752,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rochBajracharya.Pawsome;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.friends-group.Pawsome";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
