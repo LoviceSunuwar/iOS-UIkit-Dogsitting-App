@@ -13,7 +13,7 @@ class ProfileService {
     func editProfile(fullName: String, experience: String, isAvailable: Bool, completion: @escaping (_ success: Bool, _ message: String, _ profile: Profile? ) -> ()) {
         let url = Configuration.conf.baseURL + "users/edit-profile"
         let paramToSend: [String: Any] = [
-            "full_name" : fullName,
+            "name" : fullName,
             "years_of_experience" : experience,
             "is_available" : isAvailable
         ]

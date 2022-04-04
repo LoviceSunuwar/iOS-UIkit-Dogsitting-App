@@ -9,6 +9,12 @@ import UIKit
 
 class OwnerMoreViewController: UIViewController {
 
+    @IBOutlet weak var termButton: UIButton!
+    @IBOutlet weak var policyButton: UIButton!
+    @IBOutlet weak var aboutUsButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,5 +29,26 @@ class OwnerMoreViewController: UIViewController {
     @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "StaticPageViewController") as! StaticPageViewController
+        switch sender {
+            
+        case termButton:
+            vc.endPoint = EStaticPage.termsAndCondition.rawValue
+            break
+        case policyButton:
+            vc.endPoint = EStaticPage.privacyPolicy.rawValue
+            break
+        case aboutUsButton:
+            vc.endPoint = EStaticPage.aboutUs.rawValue
+            break
+        default :
+            break
+        }
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     
 }

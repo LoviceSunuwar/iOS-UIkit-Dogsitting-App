@@ -16,7 +16,7 @@ struct Profile: Codable {
     var formatted_image_url: String
     var experience: String
     var average_rating: String
-    var is_available: String
+    var is_available: Bool
     
     enum CodingKeys: String, CodingKey {
         case id

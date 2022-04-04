@@ -10,10 +10,10 @@ import Alamofire
 
 class RegisterService {
     
-    func register(fullName:String, phone: String, email: String, password: String, user_Id: Int, completion: @escaping (_ success: Bool, _ message: String, _ data:Owner?) -> ()) {
+    func register(fullName: String, phone: String, email: String, password: String, user_Id: Int, completion: @escaping (_ success: Bool, _ message: String, _ data:Owner?) -> ()) {
         let url = Configuration.conf.baseURL + "users/register"
         let params = [
-            "fullName": fullName,
+           "name" : fullName,
 //            "dogName": dogName,
             "phone": phone,
             "email": email,
