@@ -2,15 +2,13 @@
 //  OnboardingSlide.swift
 //  Pawsome
 //
-//  Created by Shivam Saini on 2022-04-02.
+//  Created by Roch on 03/04/2022.
 //
-
 
 import UIKit
 
-struct OnboardingSlide{
+struct OnboardingSlide {
     let title: String
     let description: String
     let image: UIImage
-    
 }

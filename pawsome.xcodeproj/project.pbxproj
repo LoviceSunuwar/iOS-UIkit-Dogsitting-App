@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4DF5ADB927F90C4F00EDB6B8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADB827F90C4F00EDB6B8 /* OnboardingViewController.swift */; };
-		4DF5ADBC27F9192100EDB6B8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADBB27F9192100EDB6B8 /* UIView+Extension.swift */; };
-		4DF5ADBE27F91EAD00EDB6B8 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADBD27F91EAD00EDB6B8 /* OnboardingSlide.swift */; };
-		4DF5ADC027F9282100EDB6B8 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5ADBF27F9282100EDB6B8 /* OnboardingCollectionViewCell.swift */; };
+		5BF793DC27F9490D00D70107 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */; };
+		5BF793DE27F9557300D70107 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793DD27F9557200D70107 /* OnboardingSlide.swift */; };
+		5BF793E127F958DF00D70107 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */; };
 		6922EF144757C89DC32ECC68 /* Pods_Pawsome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864612827240C32ADF71D728 /* Pods_Pawsome.framework */; };
 		C744089727F754BA00226CB0 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C744089627F754BA00226CB0 /* Ubuntu-Regular.ttf */; };
 		D526C9CF27E981730079DBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D526C9CE27E981730079DBDD /* AppDelegate.swift */; };
@@ -62,10 +61,9 @@
 
 /* Begin PBXFileReference section */
 		22855855E3C6546DA3154897 /* Pods-Pawsome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pawsome.debug.xcconfig"; path = "Target Support Files/Pods-Pawsome/Pods-Pawsome.debug.xcconfig"; sourceTree = "<group>"; };
-		4DF5ADB827F90C4F00EDB6B8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = pawsome/View/onboarding/OnboardingViewController.swift; sourceTree = SOURCE_ROOT; };
-		4DF5ADBB27F9192100EDB6B8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "pawsome/Extensions/UIView+Extension.swift"; sourceTree = SOURCE_ROOT; };
-		4DF5ADBD27F91EAD00EDB6B8 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingSlide.swift; path = pawsome/Model/OnboardingSlide.swift; sourceTree = SOURCE_ROOT; };
-		4DF5ADBF27F9282100EDB6B8 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingCollectionViewCell.swift; path = pawsome/View/onboarding/OnboardingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		5BF793DD27F9557200D70107 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		864612827240C32ADF71D728 /* Pods_Pawsome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pawsome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744089627F754BA00226CB0 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
 		D526C9CB27E981730079DBDD /* Pawsome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pawsome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,21 +128,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4DF5ADB727F90BC500EDB6B8 /* onboarding */ = {
+		5BF793DF27F9588C00D70107 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				4DF5ADB827F90C4F00EDB6B8 /* OnboardingViewController.swift */,
-				4DF5ADBF27F9282100EDB6B8 /* OnboardingCollectionViewCell.swift */,
+				5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */,
+				5BF793E027F958DF00D70107 /* OnboardingCollectionViewCell.swift */,
 			);
-			path = onboarding;
-			sourceTree = "<group>";
-		};
-		4DF5ADBA27F9181E00EDB6B8 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4DF5ADBB27F9192100EDB6B8 /* UIView+Extension.swift */,
-			);
-			path = Extensions;
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		C744089527F7548F00226CB0 /* Font */ = {
@@ -176,7 +166,6 @@
 		D526C9CD27E981730079DBDD /* Pawsome */ = {
 			isa = PBXGroup;
 			children = (
-				4DF5ADBA27F9181E00EDB6B8 /* Extensions */,
 				C744089527F7548F00226CB0 /* Font */,
 				D53BEB0C27F577F000201220 /* Helper */,
 				D526C9E527E984950079DBDD /* Storyboard */,
@@ -202,7 +191,7 @@
 				D53BEAFC27F56C4B00201220 /* Token.swift */,
 				D53BEAFF27F56C4B00201220 /* Walker.swift */,
 				D534198927F5F558006411E4 /* Dog.swift */,
-				4DF5ADBD27F91EAD00EDB6B8 /* OnboardingSlide.swift */,
+				5BF793DD27F9557200D70107 /* OnboardingSlide.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,7 +199,6 @@
 		D526C9E327E9848B0079DBDD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4DF5ADB727F90BC500EDB6B8 /* onboarding */,
 				D534198B27F5F8AC006411E4 /* Owner */,
 				D534198C27F5F8B9006411E4 /* Walker */,
 				D5B8C20A27F55DE800A8271D /* Custom */,
@@ -221,6 +209,7 @@
 		D526C9E427E984900079DBDD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5BF793DF27F9588C00D70107 /* Onboarding */,
 				D53BEB0B27F5762000201220 /* Owner */,
 				D53BEB0A27F5761B00201220 /* Walker */,
 				D526C9D227E981730079DBDD /* WalthroughViewController.swift */,
@@ -396,7 +385,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D526C9C627E981730079DBDD /* Build configuration list for PBXProject "pawsome" */;
+			buildConfigurationList = D526C9C627E981730079DBDD /* Build configuration list for PBXProject "Pawsome" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -478,7 +467,6 @@
 				D53BEB2427F5A84100201220 /* WalkerProfileViewController.swift in Sources */,
 				D5B8C21127F562AF00A8271D /* String+Extension.swift in Sources */,
 				D53BEB2827F5AD5000201220 /* OwnerChatTableViewCell.swift in Sources */,
-				4DF5ADC027F9282100EDB6B8 /* OnboardingCollectionViewCell.swift in Sources */,
 				D588E8BC27EAF70E00599370 /* LoginViewController.swift in Sources */,
 				D53BEB1227F57F8500201220 /* OwnerMoreViewController.swift in Sources */,
 				D534198A27F5F558006411E4 /* Dog.swift in Sources */,
@@ -493,23 +481,23 @@
 				D53BEB2C27F5B15500201220 /* OwnerRequestViewController.swift in Sources */,
 				D534199427F600F3006411E4 /* WalkerChatTableViewCell.swift in Sources */,
 				D5B8C21A27F56B7500A8271D /* OwnerService.swift in Sources */,
+				5BF793E127F958DF00D70107 /* OnboardingCollectionViewCell.swift in Sources */,
 				D53BEB2E27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift in Sources */,
 				D53BEB0227F56C4C00201220 /* Token.swift in Sources */,
 				D53BEB0127F56C4C00201220 /* Response.swift in Sources */,
 				D5B8C21327F5638500A8271D /* ViewController+Extension.swift in Sources */,
 				D53BEAFA27F56C3A00201220 /* Configuration.swift in Sources */,
-				4DF5ADBC27F9192100EDB6B8 /* UIView+Extension.swift in Sources */,
 				D53BEB1427F581ED00201220 /* WalkerMoreViewController.swift in Sources */,
 				D5F6F14E27ECC988003A343C /* SignupViewController.swift in Sources */,
-				4DF5ADBE27F91EAD00EDB6B8 /* OnboardingSlide.swift in Sources */,
 				D534199C27F60E6D006411E4 /* WalkerConfirmWalkViewController.swift in Sources */,
 				D53BEB2627F5AC5600201220 /* OwnerChatViewController.swift in Sources */,
 				D5B8C21927F56B7500A8271D /* WalkerService.swift in Sources */,
 				D53BEB0527F56C4C00201220 /* Walker.swift in Sources */,
-				4DF5ADB927F90C4F00EDB6B8 /* OnboardingViewController.swift in Sources */,
+				5BF793DC27F9490D00D70107 /* OnboardingViewController.swift in Sources */,
 				D526C9E827E985150079DBDD /* GlobalConstraint.swift in Sources */,
 				D53BEB2A27F5B07A00201220 /* OwnerRequestTableViewCell.swift in Sources */,
 				D53BEB1627F5848400201220 /* WalkerListViewController.swift in Sources */,
+				5BF793DE27F9557300D70107 /* OnboardingSlide.swift in Sources */,
 				D534199E27F60EA3006411E4 /* WalkerConfirmWalkTableViewCell.swift in Sources */,
 				D534199A27F609E9006411E4 /* WalkerRequestViewController.swift in Sources */,
 				D53BEB3027F5B3DD00201220 /* ConfirmWalkTableViewCell.swift in Sources */,
@@ -723,7 +711,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D526C9C627E981730079DBDD /* Build configuration list for PBXProject "pawsome" */ = {
+		D526C9C627E981730079DBDD /* Build configuration list for PBXProject "Pawsome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D526C9DD27E981740079DBDD /* Debug */,

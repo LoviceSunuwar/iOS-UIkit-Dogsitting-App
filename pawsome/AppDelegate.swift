@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Pawsome
 //
-//  Created by Roch on 3/22/22.
+//  Created by Nhuja Shakya on 3/22/22.
 //
 
 import UIKit
@@ -22,13 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        if NSLoginManager.isLoggedIn() {
-            if NSLoginManager.isOwner() {
-                goToOwnerDashboardPage()
-            } else {
-                goToWalkerDashboardPage()
-            }
-        }
+//        if NSLoginManager.isLoggedIn() {
+//            if NSLoginManager.isOwner() {
+//                goToOwnerDashboardPage()
+//            } else {
+//                goToWalkerDashboardPage()
+//            }
+//        }
         return true
     }
     

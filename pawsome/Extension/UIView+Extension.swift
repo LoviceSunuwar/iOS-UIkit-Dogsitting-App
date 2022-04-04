@@ -2,7 +2,7 @@
 //  CustomView.swift
 //  Pawsome
 //
-//  Created by Roch on 3/31/22.
+//  Created by Nhuja Shakya on 3/31/22.
 //
 
 import UIKit
@@ -39,6 +39,13 @@ extension UIView {
     func set(cornerRadius radius: CGFloat) {
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
+    }
+    
+    @IBInspectable var cornerRadius:CGFloat {
+        get{ return cornerRadius}
+        set{
+            self.layer.cornerRadius = newValue
+        }
     }
 
 }
