@@ -32,7 +32,7 @@ struct Configuration {
             return Configuration(
                 baseURL: "https://pawsome-server.herokuapp.com/api/")
         case .live:
-            return Configuration(baseURL: "https://pawsome.roch.com.np/api")
+            return Configuration(baseURL: "https://pawsome.roch.com.np/api/")
 
         default:
             return Configuration(

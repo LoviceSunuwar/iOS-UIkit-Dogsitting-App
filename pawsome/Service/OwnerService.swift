@@ -20,7 +20,7 @@ class OwnerService {
             
             do {
                 let ownersResponse = try JSONDecoder().decode(ApiResponse<[Owner]>.self, from: data)
-                completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
+//                completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
             } catch {
                 print("error", error)
                 completion(false, "Something went wrong",[])
@@ -40,7 +40,7 @@ class OwnerService {
                 
                 do {
                     let ownersResponse = try JSONDecoder().decode(ApiResponse<[OwnersPost]>.self, from: data)
-                    completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
+//                    completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
                 } catch {
                     print("error", error)
                     completion(false, "Something went wrong",[])
@@ -70,7 +70,7 @@ class OwnerService {
                 // save the token in the database... here..
                 
                 
-                completion(data.isSuccess,data.message, data.data)
+//                completion(data.isSuccess,data.message, data.data)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong",nil)
@@ -102,7 +102,7 @@ class OwnerService {
                 // save the token in the database... here..
                 
                 
-                completion(data.isSuccess,data.message, data.data)
+//                completion(data.isSuccess,data.message, data.data)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong",nil)

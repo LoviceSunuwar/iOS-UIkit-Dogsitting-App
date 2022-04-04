@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     
     var walkerService = WalkerService()
     var ownerService = OwnerService()
+    var loginService = LoginService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +48,19 @@ class LoginViewController: UIViewController {
             return }
         
         SwiftSpinner.show("Logging In...")
-        if NSLoginManager.isOwner() {
-            self.ownerLogin(username: email, password: password)
-        } else {
-            self.walkerLogin(username: email, password: password)
+        
+        
+        loginService.login(email: email, password: password) { success, message in
+            SwiftSpinner.hide()
+            if success {
+                if NSLoginManager.isOwner() {
+                    appDelegate.goToOwnerDashboardPage()
+                } else {
+                    appDelegate.goToWalkerDashboardPage()
+                }
+            } else {
+                self.alert(message: message, title: "Alert", okAction: nil)
+            }
         }
     }
     
@@ -86,5 +96,6 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
     
 }

@@ -21,7 +21,7 @@ class WalkerService {
             
             do {
                 let walkerResponse = try JSONDecoder().decode(ApiResponse<[Walker]>.self, from: data)
-                completion(walkerResponse.isSuccess, walkerResponse.message, walkerResponse.data ?? [])
+//                completion(walkerResponse.isSuccess, walkerResponse.message, walkerResponse.data ?? [])
             } catch {
                 print("error", error)
                 completion(false, "Something went wrong",[])
@@ -32,11 +32,10 @@ class WalkerService {
     
     //MARK: login
     func login(email: String, password: String, completion: @escaping (_ success: Bool, _ message: String, _ data:Walker?) -> ()) {
-        let url = Configuration.conf.baseURL + "walker/login"
+        let url = Configuration.conf.baseURL + "users/login"
         let params = [
             "email": email,
-            "password": password,
-            "type": "walker"
+            "password": password
         ] as [String: Any]
         
         AF.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
@@ -51,7 +50,7 @@ class WalkerService {
                 // save the token in the database... here..
                 
                 
-                completion(data.isSuccess,data.message, data.data)
+//                completion(data.isSuccess,data.message, data.data)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong",nil)
@@ -85,7 +84,7 @@ class WalkerService {
                 // save the token in the database... here..
                 
                 
-                completion(data.isSuccess,data.message, data.data)
+//                completion(data.isSuccess,data.message, data.data)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong",nil)
@@ -96,4 +95,3 @@ class WalkerService {
     
     
 }
-
