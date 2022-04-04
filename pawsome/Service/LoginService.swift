@@ -10,7 +10,7 @@ import Alamofire
 
 
 class LoginService {
-    func login(email: String, password: String, completion: @escaping (_ success: Bool, _ message: String) -> ()) {
+    func login(email: String, password: String, completion: @escaping (_ success: Bool, _ message: String,_ profile: Profile?) -> ()) {
         let url = Configuration.conf.baseURL + "users/login"
         let params = [
             "email": email,
@@ -19,7 +19,7 @@ class LoginService {
         
         AF.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
             guard let data = responseData.data else {
-                completion(false, "Something went wrong")
+                completion(false, "Something went wrong", nil)
                 return
             }
             
@@ -29,10 +29,10 @@ class LoginService {
                 // save the token in the database... here..
                 GlobalConstants.KeyValues.token = data.token
                 
-                completion(data.status, data.message)
+                completion(data.status, data.message, data.data)
             } catch {
                 print("error", error)
-                completion(false, "Soemthing is wrong")
+                completion(false, "Soemthing is wrong", nil)
             }
             
         }

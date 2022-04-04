@@ -50,7 +50,7 @@ class NSUserDefault {
     }
     
     class func clearAsNeeded() {
-        GlobalConstants.KeyValues.isOwner = nil
+        GlobalConstants.KeyValues.userType = nil
         GlobalConstants.KeyValues.token = nil
     }
     

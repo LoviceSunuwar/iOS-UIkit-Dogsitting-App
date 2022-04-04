@@ -10,12 +10,11 @@ import Alamofire
 
 class RegisterService {
     
-    func register(fullName: String, phone: String, email: String, password: String, user_Id: Int, completion: @escaping (_ success: Bool, _ message: String, _ data:Owner?) -> ()) {
+    func register(fullName: String, phone: String, email: String, password: String, user_Id: Int, completion: @escaping (_ success: Bool, _ message: String, _ data:Profile?) -> ()) {
         let url = Configuration.conf.baseURL + "users/register"
         let params = [
-           "name" : fullName,
-//            "dogName": dogName,
-            "phone": phone,
+            "name": fullName,
+            "mobile_number": phone,
             "email": email,
             "password": password,
             "user_type_id": user_Id
@@ -28,12 +27,12 @@ class RegisterService {
             }
             
             do {
-                let data = try JSONDecoder().decode(ApiResponse<Owner>.self, from: data)
+                let data = try JSONDecoder().decode(ApiResponse<Profile>.self, from: data)
                 
                 // save the token in the database... here..
+                GlobalConstants.KeyValues.token = data.token
                 
-                
-//                completion(data.isSuccess,data.message, data.data)
+                completion(data.status, data.message, data.data)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong",nil)

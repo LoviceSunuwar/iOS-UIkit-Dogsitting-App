@@ -26,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !(GlobalConstants.KeyValues.isOnboardingPreviouslyOpened ?? false) {
             goToOnboardingViewControllerPage()
         } else if NSLoginManager.isLoggedIn() {
-            if NSLoginManager.isOwner() {
+            switch GlobalConstants.KeyValues.userType ?? .owner {
+            case .owner:
                 goToOwnerDashboardPage()
-            } else {
+            case .walker:
                 goToWalkerDashboardPage()
             }
         } else {
@@ -75,3 +76,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
     }
 }
+

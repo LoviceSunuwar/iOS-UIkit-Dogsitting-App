@@ -10,8 +10,7 @@ import SwiftSpinner
 
 class SignupViewController: UIViewController {
     
-    var walkerService = WalkerService()
-    var ownerService = OwnerService()
+    var registerService = RegisterService()
     
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var dogNameTextField: UITextField!
@@ -33,7 +32,7 @@ class SignupViewController: UIViewController {
         phoneNumberTextField.setUnderLine()
         emailTextField.setUnderLine()
         passwordStackView.setUnderLine()
-        dogNameStackView.isHidden = !(NSLoginManager.isOwner())
+        dogNameStackView.isHidden = !(GlobalConstants.KeyValues.userType == .owner)
     }
     
     private func dismissView() {
@@ -57,6 +56,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signupButtonTapped(_ sender: Any) {
+        self.view.endEditing(true)
         guard let fullName = fullNameTextField.text, !fullName.isEmpty else { self.alert(message: "Full name is empty", title: nil, okAction: nil);
             return }
         guard let phoneNumber = phoneNumberTextField.text, !phoneNumber.isEmpty else { self.alert(message: "Phone Number is empty", title: nil, okAction: nil);
@@ -74,42 +74,22 @@ class SignupViewController: UIViewController {
         
         
         //go to login or dash board
-        
-        if NSLoginManager.isOwner() {
-            guard let dogName = dogNameTextField.text else { self.alert(message: "Dog name is empty", title: nil, okAction: nil);
-                return }
-            self.registerOwner(fullName: fullName, dogName: dogName, phone: phoneNumber, email: email, password: password)
-        } else {
-            self.registerWalker(fullName: fullName, experience: "", price: "", phone: phoneNumber, email: email, password: password)
-        }
-        
-    }
-    
-    
-    func registerOwner(fullName:String, dogName:String, phone:String, email:String, password:String){
-        
-        ownerService.registerOwner(fullName: fullName, dogName: dogName, phone: phone, email: email, password: password){success, message, data in
+        SwiftSpinner.show("Sigining In... ")
+        registerService.register(fullName: fullName, phone: phoneNumber, email: email, password: password, user_Id: Int(GlobalConstants.KeyValues.userType?.rawValue ?? "0") ?? 0) { success, message, data in
+            SwiftSpinner.hide()
             if success {
-                GlobalConstants.KeyValues.token = data?.token ?? ""
-                
-                appDelegate.goToOwnerDashboardPage()
+                guard let profile = data else {
+                    return
+                }
+                switch profile.getUserType() {
+                case .owner:
+                    appDelegate.goToOwnerDashboardPage()
+                case .walker:
+                    appDelegate.goToWalkerDashboardPage()
+                }
             } else {
-                self.alert(message: message, title: "Registration Failed", okAction: nil)
+                self.alert(message: message, title: "Error", okAction: nil)
             }
-            
         }
     }
-    
-    func registerWalker(fullName:String, experience:String,price:String, phone:String, email:String, password:String){
-        walkerService.registerWalker(fullName: fullName, experience: experience, price: price, phone: phone, email: email, password: password){success, message, data in
-            if success {
-                GlobalConstants.KeyValues.token = data?.token ?? ""
-                appDelegate.goToWalkerDashboardPage()
-            } else {
-                self.alert(message: message, title: "Registration Failed", okAction: nil)
-            }
-            
-        }
-    }
-    
 }

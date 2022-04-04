@@ -9,7 +9,7 @@ import UIKit
 
 class WalkerProfileViewController: UIViewController {
     
-    var walker: Walker!
+    var walker: Profile!
     
     @IBOutlet weak var sendWalkerRequestButton: UIButton!
     @IBOutlet weak var walkerNameLabel: UILabel!
@@ -49,7 +49,7 @@ class WalkerProfileViewController: UIViewController {
     }
     
     private func setupData() {
-        walkerNameLabel.text = walker.fullName
+        walkerNameLabel.text = walker.name
         bioLabel.text = walker.experience
     }
     

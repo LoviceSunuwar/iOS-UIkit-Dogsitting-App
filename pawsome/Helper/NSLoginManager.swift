@@ -11,11 +11,6 @@ import Foundation
 
 class NSLoginManager {
     
-    static func isOwner() -> Bool {
-        let isOwner = GlobalConstants.KeyValues.isOwner ?? false
-        return isOwner
-    }
-    
     static func isLoggedIn() -> Bool {
         let apiToken = GlobalConstants.KeyValues.token ?? ""
         return !apiToken.isEmpty

@@ -13,8 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordStackView: UIStackView!
     
-    var walkerService = WalkerService()
-    var ownerService = OwnerService()
     var loginService = LoginService()
     
     override func viewDidLoad() {
@@ -36,10 +34,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
-        
+        self.alert(message: "Sorry not available", title: "Alert", okAction: nil)
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        self.view.endEditing(true)
         guard let email = emailTextField.text, !email.isEmpty else { self.alert(message: "Email is empty", title: nil, okAction: nil);
             return }
         guard email.isValidEmail() else { self.alert(message: "Email is invalid", title: nil, okAction: nil);
@@ -49,13 +48,16 @@ class LoginViewController: UIViewController {
         
         SwiftSpinner.show("Logging In...")
         
-        
-        loginService.login(email: email, password: password) { success, message in
+        loginService.login(email: email, password: password) { success, message, profile in
             SwiftSpinner.hide()
             if success {
-                if NSLoginManager.isOwner() {
+                guard let profile = profile else {
+                    return
+                }
+                switch profile.getUserType() {
+                case .owner:
                     appDelegate.goToOwnerDashboardPage()
-                } else {
+                case .walker:
                     appDelegate.goToWalkerDashboardPage()
                 }
             } else {
@@ -68,34 +70,5 @@ class LoginViewController: UIViewController {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    func ownerLogin(username:String, password:String){
-        ownerService.login(email: username, password: password) { success, message, data in
-            SwiftSpinner.hide()
-            if success {
-                // store username and password to check if user has logged in later
-                GlobalConstants.KeyValues.token = data?.token ?? ""
-                appDelegate.goToOwnerDashboardPage()
-            } else {
-                // show alert if username or password is incorrect
-                self.alert(message: message, title: "Unauthorized", okAction: nil)
-            }
-        }
-    }
-    
-    func walkerLogin(username:String, password:String){
-        walkerService.login(email: username, password: password) { success, message, data in
-            SwiftSpinner.hide()
-            if success {
-                // store username and password to check if user has logged in later
-                GlobalConstants.KeyValues.token = data?.token ?? ""
-                appDelegate.goToWalkerDashboardPage()
-            } else {
-                // show alert if username or password is incorrect
-                self.alert(message: message, title: "Unauthorized", okAction: nil)
-            }
-        }
-    }
-    
     
 }

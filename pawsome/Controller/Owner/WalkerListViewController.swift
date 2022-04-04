@@ -19,7 +19,7 @@ class WalkerListViewController: UIViewController {
     }()
     
     var walkerService = WalkerService()
-    var walkers: [Walker] = []
+    var walkers: [Profile] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

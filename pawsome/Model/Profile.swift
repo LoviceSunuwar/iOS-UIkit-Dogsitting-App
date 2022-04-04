@@ -7,15 +7,21 @@
 
 import UIKit
 
+enum EUserType: String {
+    case owner = "2"
+    case walker = "3"
+}
+
 struct Profile: Codable {
     var id: Int
-    var uuid: String
+    var uuid: String?
     var user_type_id: String
     var name: String
     var email: String
-    var formatted_image_url: String
-    var experience: String
-    var average_rating: String
+    var phone_number: String?
+    var formatted_image_url: String?
+    var experience: String?
+    var average_rating: String?
     var is_available: Bool
     
     enum CodingKeys: String, CodingKey {
@@ -24,9 +30,14 @@ struct Profile: Codable {
         case user_type_id
         case name
         case email
+        case phone_number
         case formatted_image_url
         case experience = "years_of_experience"
         case average_rating
         case is_available
+    }
+    
+    func getUserType() -> EUserType {
+        return EUserType.init(rawValue: self.user_type_id) ?? .owner
     }
 }

@@ -18,12 +18,13 @@ struct GlobalConstants {
             }
         }
         
-        static var isOwner: Bool? {
+        static var userType: EUserType? {
             get {
-                return UserDefaults.standard.bool(forKey: GlobalConstants.UserDefaultKey.isOwner)
+                let intValue = UserDefaults.standard.string(forKey: GlobalConstants.UserDefaultKey.eUserType)
+                return EUserType.init(rawValue: intValue ?? "0")
             }
             set {
-                UserDefaults.standard.set(newValue, forKey: GlobalConstants.UserDefaultKey.isOwner)
+                UserDefaults.standard.set(newValue?.rawValue, forKey: GlobalConstants.UserDefaultKey.eUserType)
             }
         }
         
@@ -42,5 +43,6 @@ struct GlobalConstants {
         static let isOnboardingPreviouslyOpened = "isOnboardingPreviouslyOpened"
         static let isOwner = "isOwner"
         static let token = "apiToken"
+        static let eUserType = "user_type"
     }
 }
