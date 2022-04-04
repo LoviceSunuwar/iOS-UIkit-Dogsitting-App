@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
-let deploymentMode: DeploymentMode = .uat
+let deploymentMode: DeploymentMode = .live
 
 var appDelegate: AppDelegate {
     return (UIApplication.shared.delegate as! AppDelegate)
@@ -21,14 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        
-//        if NSLoginManager.isLoggedIn() {
-//            if NSLoginManager.isOwner() {
-//                goToOwnerDashboardPage()
-//            } else {
-//                goToWalkerDashboardPage()
-//            }
-//        }
+        IQKeyboardManager.shared.enable = true
+        if !(GlobalConstants.KeyValues.isOnboardingPreviouslyOpened ?? false) {
+            goToOnboardingViewControllerPage()
+        } else if NSLoginManager.isLoggedIn() {
+            if NSLoginManager.isOwner() {
+                goToOwnerDashboardPage()
+            } else {
+                goToWalkerDashboardPage()
+            }
+        } else {
+            goToWalkthroughNavigationControllerPage()
+        }
         return true
     }
     
@@ -62,5 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }
+    
+    func goToOnboardingViewControllerPage() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+    }
 }
-

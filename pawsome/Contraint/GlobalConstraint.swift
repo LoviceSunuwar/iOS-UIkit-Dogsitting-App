@@ -9,12 +9,12 @@ import Foundation
 
 struct GlobalConstants {
     struct KeyValues {
-        static var isWalkthroughPreviouslyOpened: Bool? {
+        static var isOnboardingPreviouslyOpened: Bool? {
             get {
-                return UserDefaults.standard.bool(forKey: GlobalConstants.UserDefaultKey.isWalkthroughPreviouslyOpened)
+                return UserDefaults.standard.bool(forKey: GlobalConstants.UserDefaultKey.isOnboardingPreviouslyOpened)
             }
             set {
-                UserDefaults.standard.set(newValue, forKey: GlobalConstants.UserDefaultKey.isWalkthroughPreviouslyOpened)
+                UserDefaults.standard.set(newValue, forKey: GlobalConstants.UserDefaultKey.isOnboardingPreviouslyOpened)
             }
         }
         
@@ -39,7 +39,7 @@ struct GlobalConstants {
     
     // MARK: UserDefaultKey
     struct UserDefaultKey {
-        static let isWalkthroughPreviouslyOpened = "isWalkthroughPreviouslyOpened"
+        static let isOnboardingPreviouslyOpened = "isOnboardingPreviouslyOpened"
         static let isOwner = "isOwner"
         static let token = "apiToken"
     }

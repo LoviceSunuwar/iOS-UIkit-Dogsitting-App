@@ -26,8 +26,7 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        GlobalConstants.KeyValues.isOnboardingPreviouslyOpened = true
         slides = [
                   OnboardingSlide(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: #imageLiteral(resourceName: "slide2")),
                   OnboardingSlide(title: "World-Class Chefs", description: "Our dishes are prepared by only the best.", image: #imageLiteral(resourceName: "slide1")),
@@ -36,21 +35,23 @@ class OnboardingViewController: UIViewController {
               
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     @IBAction func nextHandler(_ sender: UIButton) {
-        currentPage += 1
-        let indexPath = IndexPath(item: currentPage, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+        
+        if (currentPage + 1) == slides.count {
+            goToWalkthroughNavigationControllerPage()
+        } else {
+            currentPage += 1
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+            pageControl.currentPage = currentPage
+        }
+    }
+    
+    func goToWalkthroughNavigationControllerPage(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "WalkthroughNavigationController") as! UINavigationController
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
     }
 }
 

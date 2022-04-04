@@ -6,8 +6,9 @@ target 'Pawsome' do
   use_frameworks!
 
   # Pods for Pawsome
- pod 'Alamofire'
- pod 'SwiftyJSON'
- pod 'SwiftSpinner', :inhibit_warnings => true
- pod 'AlamofireImage'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'SwiftSpinner', :inhibit_warnings => true
+  pod 'AlamofireImage'
+  pod 'IQKeyboardManagerSwift'
 end

@@ -863,12 +863,12 @@ Walkers walk them</string>
         <!--Onboarding View Controller-->
         <scene sceneID="DfF-jm-2om">
             <objects>
-                <viewController id="nl5-L2-eFU" customClass="OnboardingViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="nl5-L2-eFU" customClass="OnboardingViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sfn-lH-tM8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="01r-sU-6rK">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="01r-sU-6rK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mH3-4m-N1u">
@@ -1277,7 +1277,7 @@ Walkers walk them</string>
                                 <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
-                                <rect key="frame" x="16" y="-822.5" width="382" height="128"/>
+                                <rect key="frame" x="16" y="73.5" width="382" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YVc-ld-est">
                                         <rect key="frame" x="16" y="8" width="350" height="112"/>
