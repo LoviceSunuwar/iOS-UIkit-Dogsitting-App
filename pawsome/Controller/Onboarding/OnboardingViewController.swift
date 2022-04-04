@@ -28,9 +28,9 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         GlobalConstants.KeyValues.isOnboardingPreviouslyOpened = true
         slides = [
-                  OnboardingSlide(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: #imageLiteral(resourceName: "slide2")),
-                  OnboardingSlide(title: "World-Class Chefs", description: "Our dishes are prepared by only the best.", image: #imageLiteral(resourceName: "slide1")),
-                  OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "slide3"))
+                  OnboardingSlide(title: "Welcome to Pawsome!", description: "The app that connects dog parents to dog walkers.", image: #imageLiteral(resourceName: "dogs 1")),
+                  OnboardingSlide(title: "Your dog is part of our family", description: "Let us treat your dog like our own family with the best walking services.", image: #imageLiteral(resourceName: "woman-with-dog")),
+                  OnboardingSlide(title: "Earn extra while doing the thing you love", description: "Walk the dogs and earn extra while spending time & love with dogs.", image: #imageLiteral(resourceName: "walker-with-dog 1"))
               ]
               
     }
