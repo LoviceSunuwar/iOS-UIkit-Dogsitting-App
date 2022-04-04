@@ -2,7 +2,7 @@
 //  Configuration.swift
 //  pawsome
 //
-//  Created by Nhuja Shakya on 3/28/22.
+//  Created by Roch on 3/28/22.
 //
 
 import Foundation
