@@ -12,6 +12,13 @@ extension UIViewController {
         return (UIApplication.shared.delegate as! AppDelegate).window
     }
     
+    func presentFullScreen(_ viewController: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
+        if #available(iOS 13.0, *) {
+            viewController.modalPresentationStyle = .fullScreen
+        }
+        self.present(viewController, animated: animated, completion: completion)
+    }
+
     func alert(message: String?, title: String? = nil, okAction: (()->())? = nil) {
         if type(of: topViewController()) == UIAlertController.self {
             return

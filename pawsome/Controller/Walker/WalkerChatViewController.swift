@@ -33,7 +33,7 @@ class WalkerChatViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationItem.title = ""
     }
-
+    
     private func setupViews() {
         setupTableView()
     }

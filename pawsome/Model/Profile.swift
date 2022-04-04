@@ -7,22 +7,22 @@
 
 import UIKit
 
-enum EUserType: String {
-    case owner = "2"
-    case walker = "3"
+enum EUserType: Int {
+    case owner = 2
+    case walker = 3
 }
 
 struct Profile: Codable {
-    var id: Int
+    var id: Int?
     var uuid: String?
-    var user_type_id: String
-    var name: String
-    var email: String
+    var user_type_id: Int?
+    var name: String?
+    var email: String?
     var phone_number: String?
     var formatted_image_url: String?
     var experience: String?
-    var average_rating: String?
-    var is_available: Bool
+    var average_rating: Double?
+    var is_available: Bool?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -38,6 +38,6 @@ struct Profile: Codable {
     }
     
     func getUserType() -> EUserType {
-        return EUserType.init(rawValue: self.user_type_id) ?? .owner
+        return EUserType.init(rawValue: self.user_type_id ?? 0) ?? .owner
     }
 }

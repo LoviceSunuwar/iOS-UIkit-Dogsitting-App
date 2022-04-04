@@ -10,12 +10,14 @@ import Alamofire
 
 class ProfileService {
     
-    func editProfile(fullName: String, experience: String, isAvailable: Bool, completion: @escaping (_ success: Bool, _ message: String, _ profile: Profile? ) -> ()) {
+    func editProfile(fullName: String,phone: String, image: String, experience: String, isAvailable: Bool, completion: @escaping (_ success: Bool, _ message: String, _ profile: Profile? ) -> ()) {
         let url = Configuration.conf.baseURL + "users/edit-profile"
         let paramToSend: [String: Any] = [
             "name" : fullName,
             "years_of_experience" : experience,
-            "is_available" : isAvailable
+            "is_available" : isAvailable,
+            "encoded_image": image,
+            "mobile_number": phone
         ]
         Session.nsRequest(url, method: .post, parameters: paramToSend).response { responseData in
             
@@ -25,8 +27,10 @@ class ProfileService {
             }
             
             do {
-                let data = try JSONDecoder().decode(ApiResponse<Profile>.self, from: data)
-                completion(data.status, data.message, data.data)
+                let apiResponse = try JSONDecoder().decode(ApiResponse<Profile>.self, from: data)
+                completion(apiResponse.status, apiResponse.message, apiResponse.data)
+                
+                
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong", nil)

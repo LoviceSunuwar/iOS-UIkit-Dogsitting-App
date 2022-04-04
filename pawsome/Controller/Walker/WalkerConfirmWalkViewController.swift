@@ -25,7 +25,7 @@ class WalkerConfirmWalkViewController: UIViewController {
         self.setupViews()
     }
     
-     override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = "Confirmed Walks"
     }
@@ -35,7 +35,6 @@ class WalkerConfirmWalkViewController: UIViewController {
         navigationItem.title = ""
     }
     
-
     private func setupViews() {
         setupTableView()
     }
