@@ -26,6 +26,16 @@ class WalkerDogListViewController: UIViewController {
         self.getDogs()
     }
     
+     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Dogs' List"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.title = ""
+    }
+
     private func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self

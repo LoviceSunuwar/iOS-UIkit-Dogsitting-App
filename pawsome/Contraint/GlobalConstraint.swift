@@ -20,8 +20,8 @@ struct GlobalConstants {
         
         static var userType: EUserType? {
             get {
-                let intValue = UserDefaults.standard.string(forKey: GlobalConstants.UserDefaultKey.eUserType)
-                return EUserType.init(rawValue: intValue ?? "0")
+               let intValue = UserDefaults.standard.integer(forKey: GlobalConstants.UserDefaultKey.eUserType)
+                return EUserType.init(rawValue: intValue)
             }
             set {
                 UserDefaults.standard.set(newValue?.rawValue, forKey: GlobalConstants.UserDefaultKey.eUserType)

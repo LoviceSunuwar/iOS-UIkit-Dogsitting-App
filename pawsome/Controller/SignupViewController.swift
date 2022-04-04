@@ -75,7 +75,7 @@ class SignupViewController: UIViewController {
         
         //go to login or dash board
         SwiftSpinner.show("Sigining In... ")
-        registerService.register(fullName: fullName, phone: phoneNumber, email: email, password: password, user_Id: Int(GlobalConstants.KeyValues.userType?.rawValue ?? "0") ?? 0) { success, message, data in
+        registerService.register(fullName: fullName, phone: phoneNumber, email: email, password: password, user_Id: GlobalConstants.KeyValues.userType?.rawValue ?? 0) { success, message, data in
             SwiftSpinner.hide()
             if success {
                 guard let profile = data else {

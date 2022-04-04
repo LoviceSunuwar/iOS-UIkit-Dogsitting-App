@@ -30,7 +30,7 @@ struct Profile: Codable {
         case user_type_id
         case name
         case email
-        case phone_number
+        case phone_number = "mobile_number"
         case formatted_image_url
         case experience = "years_of_experience"
         case average_rating

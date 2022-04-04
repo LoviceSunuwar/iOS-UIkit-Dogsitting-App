@@ -2,10 +2,11 @@
 //  WalkerProfileViewController.swift
 //  Pawsome
 //
-//  Created by Roch on 3/31/22.
+//  Created by Nhuja Shakya on 3/31/22.
 //
 
 import UIKit
+import Cosmos
 
 class WalkerProfileViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class WalkerProfileViewController: UIViewController {
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var walkerImageView: UIImageView!
+    
+    @IBOutlet weak var ratingView: CosmosView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +54,9 @@ class WalkerProfileViewController: UIViewController {
     private func setupData() {
         walkerNameLabel.text = walker.name
         bioLabel.text = walker.experience
+        ratingView.rating = walker.average_rating ?? 0
+        statusLabel.text = (walker.is_available ?? false) ? "Available for new walks" : "Not currently available for new walks"
+        walkerImageView.setImage(urlString: walker.formatted_image_url)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

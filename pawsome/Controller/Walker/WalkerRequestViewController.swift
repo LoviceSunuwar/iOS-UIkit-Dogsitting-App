@@ -27,6 +27,17 @@ class WalkerRequestViewController: UIViewController {
         self.setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Walk Requests"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.title = ""
+    }
+    
+
     private func setupViews() {
         setupTableView()
         getAllRequest()

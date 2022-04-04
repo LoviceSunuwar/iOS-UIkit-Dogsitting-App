@@ -41,7 +41,7 @@ class NSUserDefault {
     class func clear(_ type:defaultType? = nil) {
         if let _type = type {
             /*   Clean specific NSUserDefault data  */
-            UserDefaults().removeObject(forKey: _type.rawValue)
+            UserDefaults().removeObject(forKey: _type.rawValue)s
         }else{
             /*   Clean all NSUserDefault datas   */
             guard let appDomain = Bundle.main.bundleIdentifier else { return }
