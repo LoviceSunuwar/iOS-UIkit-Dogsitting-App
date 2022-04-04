@@ -5,6 +5,8 @@
 //  Created by Roch on 27/03/2022.
 //
 
+import Foundation
+
 struct ApiResponse<T: Codable>: Codable {
     
     var status: Bool
@@ -13,5 +15,4 @@ struct ApiResponse<T: Codable>: Codable {
     var token: String?
     var status_code: Int
 }
-
 

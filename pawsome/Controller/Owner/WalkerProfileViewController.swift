@@ -53,7 +53,7 @@ class WalkerProfileViewController: UIViewController {
     
     private func setupData() {
         walkerNameLabel.text = walker.name
-        bioLabel.text = walker.experience
+        bioLabel.text = "\(walker.experience ?? 0)"
         ratingView.rating = walker.average_rating ?? 0
         statusLabel.text = (walker.is_available ?? false) ? "Available for new walks" : "Not currently available for new walks"
         walkerImageView.setImage(urlString: walker.formatted_image_url)

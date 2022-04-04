@@ -29,6 +29,16 @@ class WalkerListViewController: UIViewController {
 //        [[UILabel appearance] setFont:[UIFont fontWithName:@"Ubuntu-Regular" size:17.0]];
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Walkers' List"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.title = ""
+    }
+    
     private func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self

@@ -25,6 +25,16 @@ class OwnerConfirmWalkViewController: UIViewController {
         self.setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Confirmed Walks"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.title = ""
+    }
+    
     private func setupViews() {
         setupTableView()
     }

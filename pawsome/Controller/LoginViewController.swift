@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
-        self.alert(message: "Sorry not available", title: "Alert", okAction: nil)
+        self.alert(message: "Sorry, current this func is not available", title: "Alert", okAction: nil)
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {

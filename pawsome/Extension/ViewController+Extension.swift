@@ -18,7 +18,7 @@ extension UIViewController {
         }
         self.present(viewController, animated: animated, completion: completion)
     }
-
+    
     func alert(message: String?, title: String? = nil, okAction: (()->())? = nil) {
         if type(of: topViewController()) == UIAlertController.self {
             return

@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.5.0)
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
+  - Cosmos (23.0.0)
   - IQKeyboardManagerSwift (6.5.9)
   - SwiftSpinner (2.2.0)
   - SwiftyJSON (5.0.1)
@@ -9,6 +10,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - Cosmos (~> 23.0)
   - IQKeyboardManagerSwift
   - SwiftSpinner
   - SwiftyJSON
@@ -17,6 +19,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - Cosmos
     - IQKeyboardManagerSwift
     - SwiftSpinner
     - SwiftyJSON
@@ -24,10 +27,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   SwiftSpinner: f9b59477fe107427f2b5b835497d6636fa167ede
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: ab94b9b6ed18534cffe776760ad1b25396b43949
+PODFILE CHECKSUM: 36e1b437128f59464a92d124f2cea5f864e5a571
 
 COCOAPODS: 1.11.2

@@ -11,6 +11,8 @@ class WalkerDogListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let walkerServices = WalkerService()
+    
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
@@ -18,7 +20,7 @@ class WalkerDogListViewController: UIViewController {
         return refreshControl
     }()
     
-    var dogs: [Dog] = Dog.getDogs()
+    var dogs: [Dog] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class WalkerDogListViewController: UIViewController {
         self.getDogs()
     }
     
-     override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = "Dogs' List"
     }
@@ -35,7 +37,7 @@ class WalkerDogListViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationItem.title = ""
     }
-
+    
     private func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -47,17 +49,14 @@ class WalkerDogListViewController: UIViewController {
     }
     
     private func getDogs() {
-        
-//        Dog.getDogs()
-//        walkerService.getAllWalker { success, message, walkers in
-//            self.refreshControl.endRefreshing()
-//            if success {
-//                self.walkers = walkers
-//                self.reloadTableView()
-//            } else {
-//                self.alert(message: message, title: nil, okAction: nil)
-//            }
-//        }
+        walkerServices.getAllNoticeListing { success, message in
+            self.refreshControl.endRefreshing()
+            if success {
+                
+            } else {
+                self.alert(message: message, title: nil, okAction: nil)
+            }
+        }
     }
     
     // MARK: pullToRefresh

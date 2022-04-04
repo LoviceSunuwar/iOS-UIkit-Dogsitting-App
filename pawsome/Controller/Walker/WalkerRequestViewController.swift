@@ -37,7 +37,6 @@ class WalkerRequestViewController: UIViewController {
         navigationItem.title = ""
     }
     
-
     private func setupViews() {
         setupTableView()
         getAllRequest()

@@ -31,6 +31,7 @@ class RegisterService {
                 
                 // save the token in the database... here..
                 GlobalConstants.KeyValues.token = data.token
+                GlobalConstants.KeyValues.userType = EUserType.init(rawValue: data.data?.user_type_id ?? 0)
                 
                 completion(data.status, data.message, data.data)
             } catch {

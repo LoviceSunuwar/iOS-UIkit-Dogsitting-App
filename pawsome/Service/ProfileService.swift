@@ -77,6 +77,7 @@ class ProfileService {
             do {
                 let data = try JSONDecoder().decode(ApiResponse<Profile>.self, from: data)
                 GlobalConstants.KeyValues.token = data.token
+                GlobalConstants.KeyValues.userType = EUserType.init(rawValue: data.data?.user_type_id ?? 0)
                 completion(data.status, data.message)
             } catch {
                 print("error", error)

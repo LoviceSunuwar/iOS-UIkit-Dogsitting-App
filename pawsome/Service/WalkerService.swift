@@ -32,5 +32,26 @@ class WalkerService {
         }
     }
     
+    func getAllNoticeListing(completion: @escaping (_ success: Bool, _ message: String) -> ()) {
+        let url = Configuration.conf.baseURL + "owners/users/walkers/notices"
+        
+        Session.nsRequest(url, method: .get).response { responseData in
+            
+            guard let data = responseData.data else {
+                completion(false, "Something went wrong")
+                return
+            }
+            
+            do {
+                let data = try JSONDecoder().decode(ApiResponse<[Profile]>.self, from: data)
+                completion(data.status, data.message)
+            } catch {
+                print("error", error)
+                completion(false, "Soemthing is wrong")
+            }
+            
+        }
+    }
+    
 }
 

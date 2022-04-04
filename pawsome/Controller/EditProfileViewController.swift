@@ -86,7 +86,7 @@ class EditProfileViewController: UIViewController {
         }
         nameTextField.text = profile.name
         phoneNumberTextField.text = profile.phone_number
-        yearExperienceTextField.text = profile.experience
+        yearExperienceTextField.text = "\(profile.experience ?? 0 )"
         areYouAvailbleSwitch.isOn = profile.is_available ?? false
         
     }

@@ -20,7 +20,7 @@ struct GlobalConstants {
         
         static var userType: EUserType? {
             get {
-               let intValue = UserDefaults.standard.integer(forKey: GlobalConstants.UserDefaultKey.eUserType)
+                let intValue = UserDefaults.standard.integer(forKey: GlobalConstants.UserDefaultKey.eUserType)
                 return EUserType.init(rawValue: intValue)
             }
             set {
@@ -41,7 +41,6 @@ struct GlobalConstants {
     // MARK: UserDefaultKey
     struct UserDefaultKey {
         static let isOnboardingPreviouslyOpened = "isOnboardingPreviouslyOpened"
-        static let isOwner = "isOwner"
         static let token = "apiToken"
         static let eUserType = "user_type"
     }

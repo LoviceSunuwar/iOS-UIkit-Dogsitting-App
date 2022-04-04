@@ -20,7 +20,7 @@ struct Profile: Codable {
     var email: String?
     var phone_number: String?
     var formatted_image_url: String?
-    var experience: String?
+    var experience: Double?
     var average_rating: Double?
     var is_available: Bool?
     
