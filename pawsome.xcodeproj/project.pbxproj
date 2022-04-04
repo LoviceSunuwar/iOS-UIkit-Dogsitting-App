@@ -407,7 +407,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D526C9C627E981730079DBDD /* Build configuration list for PBXProject "Pawsome" */;
+			buildConfigurationList = D526C9C627E981730079DBDD /* Build configuration list for PBXProject "pawsome" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -690,7 +690,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4N332A7XBB;
+				DEVELOPMENT_TEAM = P7Y559NK43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pawsome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -703,7 +703,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rochBajracharya.Pawsome;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.friends-group.Pawsome";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -719,7 +719,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4N332A7XBB;
+				DEVELOPMENT_TEAM = P7Y559NK43;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pawsome/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -732,7 +732,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rochBajracharya.Pawsome;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.friends-group.Pawsome";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -743,7 +743,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D526C9C627E981730079DBDD /* Build configuration list for PBXProject "Pawsome" */ = {
+		D526C9C627E981730079DBDD /* Build configuration list for PBXProject "pawsome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D526C9DD27E981740079DBDD /* Debug */,

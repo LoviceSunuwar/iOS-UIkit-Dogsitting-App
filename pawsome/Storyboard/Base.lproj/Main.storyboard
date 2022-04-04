@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bCb-cb-Ag8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bCb-cb-Ag8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -1203,7 +1203,7 @@ Walkers walk them</string>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2Mw-7K-Wav">
-                                <rect key="frame" x="149.5" y="730" width="115.5" height="26"/>
+                                <rect key="frame" x="129.5" y="730" width="155.5" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="systemGray5Color"/>
                                 <color key="currentPageIndicatorTintColor" red="0.22682648899999999" green="0.48217457530000002" blue="0.49412250520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
@@ -3840,6 +3840,14 @@ Walkers walk them</string>
             <point key="canvasLocation" x="6438" y="1258"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="N38-N8-l88">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+        <designable name="Pvm-rv-7c5">
+            <size key="intrinsicContentSize" width="125" height="21"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="SYj-sC-cj3"/>
         <segue reference="42q-YU-SbV"/>
