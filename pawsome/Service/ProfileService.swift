@@ -28,7 +28,7 @@ class ProfileService {
             
             do {
                 let apiResponse = try JSONDecoder().decode(ApiResponse<Profile>.self, from: data)
-                completion(apiResponse.status, apiResponse.message, apiResponse.data)
+                completion(apiResponse.status ?? false, apiResponse.message, apiResponse.data)
                 
                 
             } catch {
@@ -51,7 +51,7 @@ class ProfileService {
             
             do {
                 let data = try JSONDecoder().decode(ApiResponse<Profile>.self, from: data)
-                completion(data.status, data.message, data.data)
+                completion(data.status ?? false, data.message, data.data)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong", nil)
@@ -78,7 +78,7 @@ class ProfileService {
                 let data = try JSONDecoder().decode(ApiResponse<Profile>.self, from: data)
                 GlobalConstants.KeyValues.token = data.token
                 GlobalConstants.KeyValues.userType = EUserType.init(rawValue: data.data?.user_type_id ?? 0)
-                completion(data.status, data.message)
+                completion(data.status ?? false, data.message)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong")
