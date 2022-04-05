@@ -15,6 +15,9 @@ class OwnerRequestViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         return refreshControl
     }()
+    
+    var walkRequestService = WalkRequestService()
+    var walkRequests: [WalkRequest] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,6 +26,7 @@ class OwnerRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+        self.getWalkRequests()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +54,19 @@ class OwnerRequestViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    private func getWalkRequests() {
+        walkRequestService.getWalkRequest { success, message, walkRequests in
+            print(walkRequests)
+            self.refreshControl.endRefreshing()
+            if success {
+                self.walkRequests = walkRequests
+                self.reloadTableView()
+            } else {
+                self.alert(message: message, title: nil, okAction: nil)
+            }
+        }
+    }
+    
     func getAllRequest() {
         refreshControl.endRefreshing()
         reloadTableView()
@@ -63,12 +80,12 @@ class OwnerRequestViewController: UIViewController {
 
 extension OwnerRequestViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return walkRequests.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OwnerRequestTableViewCell") as! OwnerRequestTableViewCell
-        
+        cell.walkRequest = walkRequests[indexPath.row]
         return cell
     }
     

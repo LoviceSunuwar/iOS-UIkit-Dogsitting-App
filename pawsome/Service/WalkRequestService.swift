@@ -11,22 +11,60 @@ import Alamofire
 class WalkRequestService {
     
     func getWalkRequest(completion: @escaping (_ success: Bool, _ message: String, _ walkRequests: [WalkRequest]) -> ()) {
-        let url = Configuration.conf.baseURL + "owners/walk-requests/"
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+        let url = Configuration.conf.baseURL + "owners/walk-requests"
+        
+        Session.nsRequest(url, method: .get).response { responseData in
+            
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", [])
                 return
             }
             
             do {
-                let response = try JSONDecoder().decode(ApiResponse<[WalkRequest]>.self, from: data)
-                //                    completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
+                let data = try JSONDecoder().decode(ApiResponse<[WalkRequest]>.self, from: data)
+                completion(data.status , data.message, data.data ?? [])
             } catch {
                 print("error", error)
-                completion(false, "Something went wrong",[])
+                completion(false, "Soemthing is wrong", [])
             }
             
         }
+        
+//        let url = Configuration.conf.baseURL + "owners/walk-requests/"
+//
+//        Session.nsRequest(url, method: .get).response { responseData in
+//
+//            guard let data = responseData.data else {
+//                completion(false, "Something went wrong", [])
+//                return
+//            }
+//
+//            do {
+//                let data = try JSONDecoder().decode(ApiResponse<[WalkRequest]>.self, from: data)
+//                print(data)
+//                completion(data.status , data.message, data.data ?? [])
+//            } catch {
+//                print("error", error)
+//                completion(false, "Soemthing is wrong", [])
+//            }
+//
+//        }
+        
+//        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+//            guard let data = responseData.data else {
+//                completion(false, "Something went wrong", [])
+//                return
+//            }
+//
+//            do {
+//                let data = try JSONDecoder().decode(ApiResponse<[WalkRequest]>.self, from: data)
+//                completion(data.status , data.message, data.data ?? [])
+//            } catch {
+//                print("error", error)
+//                completion(false, "Something went wrong",[])
+//            }
+//
+//        }
     }
     
     func selectWalker(animalId:String, walkerId:String, noticeId:String, completion: @escaping (_ success: Bool, _ message: String) -> ()) {

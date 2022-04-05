@@ -16,6 +16,9 @@ class OwnerConfirmWalkViewController: UIViewController {
         return refreshControl
     }()
 
+    var walkRequestService = WalkRequestService()
+    var walkRequests: [WalkRequest] = []
+    
     @IBOutlet weak var tableView: UITableView!
     
     var confirmWalks: [String] = []
@@ -23,6 +26,7 @@ class OwnerConfirmWalkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+        self.getWalkRequests()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +53,19 @@ class OwnerConfirmWalkViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    private func getWalkRequests() {
+        walkRequestService.getWalkRequest { success, message, walkRequests in
+            print(walkRequests)
+            self.refreshControl.endRefreshing()
+            if success {
+                self.walkRequests = walkRequests.filter{!($0.owner_approved_at?.isEmpty ?? true)}
+                self.reloadTableView()
+            } else {
+                self.alert(message: message, title: nil, okAction: nil)
+            }
+        }
+    }
+    
     func getAllConfirmRequest() {
         refreshControl.endRefreshing()
         reloadTableView()
@@ -62,16 +79,20 @@ class OwnerConfirmWalkViewController: UIViewController {
 
 extension OwnerConfirmWalkViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return walkRequests.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmWalkTableViewCell") as! ConfirmWalkTableViewCell
-        
+        cell.walkRequest = walkRequests[indexPath.row]
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WalkDetailViewController") as! WalkDetailViewController
+        vc.walkRequest = walkRequests[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
