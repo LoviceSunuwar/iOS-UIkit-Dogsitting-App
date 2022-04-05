@@ -50,6 +50,7 @@
 		D53BEB2E27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */; };
 		D53BEB3027F5B3DD00201220 /* ConfirmWalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BEB2F27F5B3DD00201220 /* ConfirmWalkTableViewCell.swift */; };
 		D53DE7B327FA8F31008E8DB0 /* OwnersPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DE7B227FA8F31008E8DB0 /* OwnersPostTableViewCell.swift */; };
+		D561DF1327FC13C300A5A6D6 /* CreateNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D561DF1227FC13C300A5A6D6 /* CreateNoticeViewController.swift */; };
 		D588E8BC27EAF70E00599370 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588E8BB27EAF70E00599370 /* LoginViewController.swift */; };
 		D594E92527FA19EE000214EC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594E92427FA19EE000214EC /* EditProfileViewController.swift */; };
 		D594E92727FA1D74000214EC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594E92627FA1D74000214EC /* ImagePicker.swift */; };
@@ -123,6 +124,7 @@
 		D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerConfirmWalkViewController.swift; sourceTree = "<group>"; };
 		D53BEB2F27F5B3DD00201220 /* ConfirmWalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmWalkTableViewCell.swift; sourceTree = "<group>"; };
 		D53DE7B227FA8F31008E8DB0 /* OwnersPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnersPostTableViewCell.swift; sourceTree = "<group>"; };
+		D561DF1227FC13C300A5A6D6 /* CreateNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoticeViewController.swift; sourceTree = "<group>"; };
 		D588E8BB27EAF70E00599370 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D594E92427FA19EE000214EC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		D594E92627FA1D74000214EC /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */,
 				D5B5E49527FA03C500ED567E /* ProfileViewController.swift */,
 				5BB70CC427FBB9FB00304436 /* WalkDetailViewController.swift */,
+				D561DF1227FC13C300A5A6D6 /* CreateNoticeViewController.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				D526C9D327E981730079DBDD /* WalthroughViewController.swift in Sources */,
 				D534198E27F5F8D8006411E4 /* DogListTableViewCell.swift in Sources */,
 				D5FE28E927F9BDD500B1EAF1 /* RegisterService.swift in Sources */,
+				D561DF1327FC13C300A5A6D6 /* CreateNoticeViewController.swift in Sources */,
 				5B8FA74227FA9AE80053E6AD /* AnimalService.swift in Sources */,
 				D5B8C20C27F55DFF00A8271D /* CustomTextField.swift in Sources */,
 				D594E92927FA313F000214EC /* Animal.swift in Sources */,

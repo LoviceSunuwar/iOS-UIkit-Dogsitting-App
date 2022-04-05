@@ -9,8 +9,9 @@ import UIKit
 
 class ProfileViewController: UITableViewController {
     enum otherCells: Int {
-        case changePassword = 0
-        case more = 1
+        case createANotice = 0
+        case changePassword = 1
+        case more = 2
     }
     
     enum profileSections {
@@ -70,12 +71,17 @@ class ProfileViewController: UITableViewController {
         case .other:
             if let element = otherCells.init(rawValue: indexPath.row) {
                 switch element {
+                case .createANotice:
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "CreateNoticeViewController") as! CreateNoticeViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
                 case .changePassword:
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case .more:
                     break
+               
                 }
             }
         case .logout:

@@ -29,8 +29,8 @@ class NoticeService {
         }
     }
     
-    func createNotice(animalId:String, title:String, desc:String, dateTime:String, addressLine1:String, addressLine2:String, city:String, state:String, country:String, completion: @escaping (_ success: Bool, _ message: String, _ animal: Animal? ) -> ()) {
-        let url = Configuration.conf.baseURL + "owner/notices"
+    func createNotice(animalId:Int, title:String, desc:String, dateTime:String, addressLine1:String, addressLine2:String, city:String, state:String, country:String, completion: @escaping (_ success: Bool, _ message: String, _ notice: Notice? ) -> ()) {
+        let url = Configuration.conf.baseURL + "owners/notices"
         let params = [
             "fk_animal_id": animalId,
             "notice_title": title,
@@ -40,17 +40,17 @@ class NoticeService {
             "address_line_2": addressLine2,
             "address_city": city,
             "address_state": state,
-            "address_country":country
+            "address_country": country
         ] as [String: Any]
         
-        AF.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+        Session.nsRequest(url, method: .post, parameters: params).response { (responseData) in
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", nil)
                 return
             }
             
             do {
-                let data = try JSONDecoder().decode(ApiResponse<Animal>.self, from: data)
+                let data = try JSONDecoder().decode(ApiResponse<Notice>.self, from: data)
                 
                 completion(data.status, data.message, data.data)
             } catch {

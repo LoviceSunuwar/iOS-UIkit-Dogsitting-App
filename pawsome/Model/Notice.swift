@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Notice : Codable {
-    let id: Int
+    let id: Int?
     var owner: Profile?
     var animal: Animal?
     var notice_title: String?

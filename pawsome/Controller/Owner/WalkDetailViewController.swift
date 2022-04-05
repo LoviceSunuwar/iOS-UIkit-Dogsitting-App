@@ -20,6 +20,7 @@ class WalkDetailViewController: UIViewController {
     @IBOutlet weak var cancelWalkBtn: UIButton!
     @IBOutlet weak var viewButton: UIButton!
     @IBOutlet weak var chatButton: UIButton!
+    @IBOutlet weak var instructionStack: UIStackView!
     
     @IBOutlet weak var walkerImageView: UIImageView!
     
@@ -27,9 +28,19 @@ class WalkDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        walkerName.text = walkRequest.walker?.name
-        walkDate.text = walkRequest.notice?.requested_date_time
+        self.setupData()
         viewButton.setTitle("View \(walkRequest.walker?.name ?? "")'s profile", for: .normal)
+        instructionStack.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.title = "Walk Details"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.title = ""
     }
     
     private func setupData() {
@@ -39,6 +50,9 @@ class WalkDetailViewController: UIViewController {
     }
     
     @IBAction func viewProfilHandler(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WalkerProfileViewController") as! WalkerProfileViewController
+        vc.walker = walkRequest.walker
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func cancelWalkHandler(_ sender: UIButton) {

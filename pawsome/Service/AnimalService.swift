@@ -12,8 +12,9 @@ class AnimalService {
     
     func getAnimal(completion: @escaping (_ success: Bool, _ message: String, _ animal: [Animal
                                                                                         ]) -> ()) {
-        let url = Configuration.conf.baseURL + "owner/animals"
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+        let url = Configuration.conf.baseURL + "owners/animals"
+        
+        Session.nsRequest(url, method: .get).response { (responseData) in
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", [])
                 return
@@ -21,7 +22,7 @@ class AnimalService {
             
             do {
                 let response = try JSONDecoder().decode(ApiResponse<[Animal]>.self, from: data)
-                //                    completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
+                completion(response.status, response.message, response.data ?? [])
             } catch {
                 print("error", error)
                 completion(false, "Something went wrong",[])
