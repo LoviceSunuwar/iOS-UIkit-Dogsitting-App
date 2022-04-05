@@ -1611,10 +1611,10 @@ Walkers walk them</string>
             </objects>
             <point key="canvasLocation" x="1950.7246376811595" y="3312.7232142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Walk Detail View Controller-->
         <scene sceneID="gRZ-ci-kIc">
             <objects>
-                <viewController id="imA-f7-Wft" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkDetailViewController" id="imA-f7-Wft" customClass="WalkDetailViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IkO-f3-19c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1637,14 +1637,8 @@ Walkers walk them</string>
                                 <color key="textColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="View Liam's Profile &gt;&gt;&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-Hx-H0O">
-                                <rect key="frame" x="20" y="283" width="327" height="24"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="highlightedColor" red="0.22745099660000001" green="0.48235297199999999" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
-                                <rect key="frame" x="16" y="80" width="382" height="128"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8b-LQ-wjn">
+                                <rect key="frame" x="16" y="97.5" width="382" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YVc-ld-est">
                                         <rect key="frame" x="16" y="8" width="350" height="112"/>
@@ -1657,7 +1651,7 @@ Walkers walk them</string>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8mL-fM-Ct8">
-                                                <rect key="frame" x="91" y="0.0" width="204" height="111.5"/>
+                                                <rect key="frame" x="91" y="0.5" width="204" height="111.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ei-ZU-vg5">
                                                         <rect key="frame" x="0.0" y="0.0" width="204" height="20.5"/>
@@ -1720,7 +1714,7 @@ Walkers walk them</string>
                                     <constraint firstAttribute="width" secondItem="z8b-LQ-wjn" secondAttribute="height" multiplier="349:117" id="f9C-cm-2IF"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hs-X2K">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hs-X2K">
                                 <rect key="frame" x="19" y="326" width="374" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="7uu-Ww-NB0"/>
@@ -1733,6 +1727,9 @@ Walkers walk them</string>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelWalkHandler:" destination="imA-f7-Wft" eventType="touchUpInside" id="F7W-mo-xOh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnE-NZ-Lqh">
                                 <rect key="frame" x="19" y="375" width="374" height="41"/>
@@ -1745,18 +1742,9 @@ Walkers walk them</string>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRF-kf-mY0">
-                                <rect key="frame" x="19" y="424" width="374" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1607843041" green="0.61960786580000005" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="View the Location of Walker " cornerStyle="capsule">
-                                    <backgroundConfiguration key="background" strokeWidth="2">
-                                        <color key="strokeColor" red="0.1607843041" green="0.62352943419999995" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="chatHandler:" destination="imA-f7-Wft" eventType="touchUpInside" id="qic-JU-GrX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-ap-QlH">
                                 <rect key="frame" x="20" y="536" width="103" height="24"/>
@@ -1842,28 +1830,41 @@ Walkers walk them</string>
                                     </textView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCO-Jo-9BV">
+                                <rect key="frame" x="19" y="274" width="176" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="View Liam's Profile &gt;&gt;&gt;"/>
+                                <connections>
+                                    <action selector="viewProfilHandler:" destination="imA-f7-Wft" eventType="touchUpInside" id="OzA-0b-66q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xDK-E3-Skn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="w7U-de-9So" firstAttribute="trailing" secondItem="Bjx-nc-SxI" secondAttribute="trailing" id="3Gx-02-VPn"/>
-                            <constraint firstItem="xDK-E3-Skn" firstAttribute="trailing" secondItem="ndM-Hx-H0O" secondAttribute="trailing" constant="65.5" id="4Wy-Xf-u2l"/>
                             <constraint firstItem="Bjx-nc-SxI" firstAttribute="trailing" secondItem="xDK-E3-Skn" secondAttribute="trailing" id="DOV-0Q-Tok"/>
-                            <constraint firstItem="xDK-E3-Skn" firstAttribute="bottom" secondItem="ndM-Hx-H0O" secondAttribute="bottom" constant="628.5" id="EjF-cp-ggF"/>
                             <constraint firstItem="w7U-de-9So" firstAttribute="top" secondItem="Bjx-nc-SxI" secondAttribute="bottom" constant="20" id="Gmt-Fv-sm6"/>
                             <constraint firstItem="Jbv-hs-X2K" firstAttribute="centerX" secondItem="z8b-LQ-wjn" secondAttribute="centerX" constant="-1" id="TVm-yU-vzg"/>
                             <constraint firstItem="z8b-LQ-wjn" firstAttribute="trailing" secondItem="IkO-f3-19c" secondAttribute="trailingMargin" constant="4" id="U8S-u1-fhl"/>
                             <constraint firstItem="Bjx-nc-SxI" firstAttribute="leading" secondItem="xDK-E3-Skn" secondAttribute="leading" id="XfH-KG-RGx"/>
                             <constraint firstItem="Bjx-nc-SxI" firstAttribute="top" secondItem="xDK-E3-Skn" secondAttribute="top" id="ZeS-Ap-ULP"/>
-                            <constraint firstItem="ndM-Hx-H0O" firstAttribute="leading" secondItem="IkO-f3-19c" secondAttribute="leadingMargin" id="aa4-74-dx1"/>
-                            <constraint firstItem="Jbv-hs-X2K" firstAttribute="leading" secondItem="ndM-Hx-H0O" secondAttribute="leading" constant="-1" id="dop-vg-hVB"/>
-                            <constraint firstItem="ndM-Hx-H0O" firstAttribute="top" secondItem="z8b-LQ-wjn" secondAttribute="bottom" constant="8" id="jCw-Vy-kr9"/>
                             <constraint firstItem="w7U-de-9So" firstAttribute="centerX" secondItem="IkO-f3-19c" secondAttribute="centerX" id="mBA-Bf-N55"/>
                             <constraint firstItem="w7U-de-9So" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bjx-nc-SxI" secondAttribute="leading" id="oHk-tu-RLI"/>
                             <constraint firstItem="z8b-LQ-wjn" firstAttribute="leading" secondItem="xDK-E3-Skn" secondAttribute="leading" constant="16" id="wGg-42-ic8"/>
-                            <constraint firstItem="Jbv-hs-X2K" firstAttribute="top" secondItem="ndM-Hx-H0O" secondAttribute="bottom" constant="19" id="xAJ-Oa-Ow5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelWalkBtn" destination="Jbv-hs-X2K" id="M8c-VW-sdJ"/>
+                        <outlet property="chatButton" destination="FnE-NZ-Lqh" id="nCt-0v-v0s"/>
+                        <outlet property="viewButton" destination="kCO-Jo-9BV" id="4ha-UB-HYy"/>
+                        <outlet property="walkDate" destination="8ZL-sk-cd9" id="uX6-Hw-qyS"/>
+                        <outlet property="walkDuration" destination="qJV-Le-Pbp" id="P5Q-me-fkt"/>
+                        <outlet property="walkTime" destination="16o-Ti-S3P" id="ldi-Cd-YML"/>
+                        <outlet property="walkerImageView" destination="FQf-2Y-OHr" id="boE-hn-fmr"/>
+                        <outlet property="walkerName" destination="3Ei-ZU-vg5" id="EFH-zI-pOH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjk-6D-xFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3940,7 +3941,7 @@ Walkers walk them</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="deV-c9-ndC"/>
-        <segue reference="42q-YU-SbV"/>
+        <segue reference="Tvt-hG-mnc"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.086274509799999996" green="0.49019607840000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

@@ -19,7 +19,11 @@ class ConfirmWalkTableViewCell: UITableViewCell {
     
     @IBOutlet weak var durationLabel: UILabel!
     
-    
+    var walkRequest: WalkRequest! {
+        didSet {
+            setupData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,6 +37,15 @@ class ConfirmWalkTableViewCell: UITableViewCell {
     
     private func setupViews() {
         setupImageView()
+    }
+    
+    private func setupData() {
+        walkerImageView.setImage(urlString: walkRequest.walker?.formatted_image_url)
+        walkerNameLabel.text = walkRequest.walker?.name
+        walkerAmount.isHidden = true
+        dateLabel.text = "Walk At: " + (walkRequest.notice?.requested_date_time ?? "")
+        timeLabel.isHidden = true
+        durationLabel.isHidden = true
     }
 
 }

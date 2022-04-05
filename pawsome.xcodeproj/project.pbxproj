@@ -11,6 +11,7 @@
 		5B1E8EEE27FAAD95008C94B6 /* WalkRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E8EED27FAAD95008C94B6 /* WalkRequestService.swift */; };
 		5B1E8EF027FAB1A1008C94B6 /* WalkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E8EEF27FAB1A1008C94B6 /* WalkRequest.swift */; };
 		5B8FA74227FA9AE80053E6AD /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FA74127FA9AE80053E6AD /* AnimalService.swift */; };
+		5BB70CC527FBB9FB00304436 /* WalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB70CC427FBB9FB00304436 /* WalkDetailViewController.swift */; };
 		5BC6D8E727FBA6E7005EB425 /* Common+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6D8E627FBA6E7005EB425 /* Common+Extension.swift */; };
 		5BF793DC27F9490D00D70107 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */; };
 		5BF793DE27F9557300D70107 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF793DD27F9557200D70107 /* OnboardingSlide.swift */; };
@@ -81,6 +82,7 @@
 		5B1E8EED27FAAD95008C94B6 /* WalkRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkRequestService.swift; sourceTree = "<group>"; };
 		5B1E8EEF27FAB1A1008C94B6 /* WalkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkRequest.swift; sourceTree = "<group>"; };
 		5B8FA74127FA9AE80053E6AD /* AnimalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
+		5BB70CC427FBB9FB00304436 /* WalkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDetailViewController.swift; sourceTree = "<group>"; };
 		5BC6D8E627FBA6E7005EB425 /* Common+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common+Extension.swift"; sourceTree = "<group>"; };
 		5BF793DB27F9490C00D70107 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5BF793DD27F9557200D70107 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				D53BEB2B27F5B15500201220 /* OwnerRequestViewController.swift */,
 				D53BEB2D27F5B3AA00201220 /* OwnerConfirmWalkViewController.swift */,
 				D5B5E49527FA03C500ED567E /* ProfileViewController.swift */,
+				5BB70CC427FBB9FB00304436 /* WalkDetailViewController.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -425,7 +428,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D526C9C627E981730079DBDD /* Build configuration list for PBXProject "Pawsome" */;
+			buildConfigurationList = D526C9C627E981730079DBDD /* Build configuration list for PBXProject "pawsome" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -510,6 +513,7 @@
 				D53BEB2827F5AD5000201220 /* OwnerChatTableViewCell.swift in Sources */,
 				D588E8BC27EAF70E00599370 /* LoginViewController.swift in Sources */,
 				D5FE28EF27F9C61900B1EAF1 /* StaticPageService.swift in Sources */,
+				5BB70CC527FBB9FB00304436 /* WalkDetailViewController.swift in Sources */,
 				D534198A27F5F558006411E4 /* Dog.swift in Sources */,
 				D534198827F5F44C006411E4 /* WalkerDogListViewController.swift in Sources */,
 				D5B5E49A27FA13C100ED567E /* WalkersProfileViewController.swift in Sources */,
@@ -767,7 +771,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D526C9C627E981730079DBDD /* Build configuration list for PBXProject "Pawsome" */ = {
+		D526C9C627E981730079DBDD /* Build configuration list for PBXProject "pawsome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D526C9DD27E981740079DBDD /* Debug */,
