@@ -29,42 +29,27 @@ class WalkRequestService {
             }
             
         }
+    }
+    
+    func ownerCancelWalk(walkId:String, completion: @escaping (_ success: Bool, _ message: String) -> ()) {
+        let url = Configuration.conf.baseURL + "owners/walk-requests/" + walkId + "/reject-walk-request"
         
-//        let url = Configuration.conf.baseURL + "owners/walk-requests/"
-//
-//        Session.nsRequest(url, method: .get).response { responseData in
-//
-//            guard let data = responseData.data else {
-//                completion(false, "Something went wrong", [])
-//                return
-//            }
-//
-//            do {
-//                let data = try JSONDecoder().decode(ApiResponse<[WalkRequest]>.self, from: data)
-//                print(data)
-//                completion(data.status , data.message, data.data ?? [])
-//            } catch {
-//                print("error", error)
-//                completion(false, "Soemthing is wrong", [])
-//            }
-//
-//        }
-        
-//        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
-//            guard let data = responseData.data else {
-//                completion(false, "Something went wrong", [])
-//                return
-//            }
-//
-//            do {
-//                let data = try JSONDecoder().decode(ApiResponse<[WalkRequest]>.self, from: data)
-//                completion(data.status , data.message, data.data ?? [])
-//            } catch {
-//                print("error", error)
-//                completion(false, "Something went wrong",[])
-//            }
-//
-//        }
+        Session.nsRequest(url, method: .post).response { responseData in
+            
+            guard let data = responseData.data else {
+                completion(false, "Something went wrong")
+                return
+            }
+            
+            do {
+                let data = try JSONDecoder().decode(ApiResponse<[WalkRequest]>.self, from: data)
+                completion(data.status , data.message)
+            } catch {
+                print("error", error)
+                completion(false, "Soemthing is wrong")
+            }
+            
+        }
     }
     
     func selectWalker(animalId:String, walkerId:String, noticeId:String, completion: @escaping (_ success: Bool, _ message: String) -> ()) {

@@ -10,6 +10,7 @@ import UIKit
 class WalkDetailViewController: UIViewController {
     
     var walkRequest:WalkRequest!
+    var walkRequestService = WalkRequestService()
     
     @IBOutlet weak var walkerName: UILabel!
     @IBOutlet weak var walkDate: UILabel!
@@ -28,7 +29,7 @@ class WalkDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         walkerName.text = walkRequest.walker?.name
         walkDate.text = walkRequest.notice?.requested_date_time
-        
+        viewButton.setTitle("View \(walkRequest.walker?.name ?? "")'s profile", for: .normal)
     }
     
     private func setupData() {
@@ -41,9 +42,15 @@ class WalkDetailViewController: UIViewController {
     }
     
     @IBAction func cancelWalkHandler(_ sender: UIButton) {
+        walkRequestService.ownerCancelWalk(walkId: String(walkRequest.id)){success, message in
+            self.alert(message: message, title: nil){
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func chatHandler(_ sender: UIButton) {
+        
     }
     
 }

@@ -26,7 +26,6 @@ class OwnerRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
-        self.getWalkRequests()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +53,7 @@ class OwnerRequestViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    private func getWalkRequests() {
+    func getAllRequest() {
         walkRequestService.getWalkRequest { success, message, walkRequests in
             print(walkRequests)
             self.refreshControl.endRefreshing()
@@ -65,11 +64,6 @@ class OwnerRequestViewController: UIViewController {
                 self.alert(message: message, title: nil, okAction: nil)
             }
         }
-    }
-    
-    func getAllRequest() {
-        refreshControl.endRefreshing()
-        reloadTableView()
     }
     
     @objc private func pullToRefresh() {
