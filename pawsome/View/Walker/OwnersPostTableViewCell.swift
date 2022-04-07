@@ -15,6 +15,10 @@ class OwnersPostTableViewCell: UITableViewCell {
     @IBOutlet weak var postDescriptionLabel: UILabel!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var availableButton: UIButton!
+    @IBOutlet weak var ownerLabelStack: UIStackView!
+    
+    var isOwner = false;
     
     
     var post: Notice! {
@@ -35,10 +39,14 @@ class OwnersPostTableViewCell: UITableViewCell {
     }
     
     private func setupData() {
-        postNameLabel.text = post.animal?.animal_name ?? ""
-        postDateLabel.text = post.requested_date_time ?? ""
+        postDateLabel.text = post.owner?.name ?? ""
+        postNameLabel.text = post.notice_title ?? ""
         postDescriptionLabel.text = post.notice_description ?? ""
         postImageView.setImage(urlString: post.animal?.animal_image_url)
+        if isOwner {
+            availableButton.isHidden = true
+//            ownerLabelStack.isHidden = true
+        }
     }
 
 }

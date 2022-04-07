@@ -2002,7 +2002,7 @@ Walkers walk them</string>
             </objects>
             <point key="canvasLocation" x="1950.7246376811595" y="2488.3928571428569"/>
         </scene>
-        <!--Chats-->
+        <!--Posts-->
         <scene sceneID="CSU-Gg-xND">
             <objects>
                 <viewController storyboardIdentifier="OwnerChatViewController" id="5eo-gU-R2c" customClass="OwnerChatViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
@@ -2087,6 +2087,106 @@ Walkers walk them</string>
                                             <outlet property="walkerNameLabel" destination="9Hc-dZ-Ido" id="K0y-OV-eFm"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OwnersPostTableViewCell" rowHeight="250" id="XT9-jN-KqO" customClass="OwnersPostTableViewCell" customModule="Pawsome" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="182.5" width="414" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XT9-jN-KqO" id="IYT-gf-roe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjY-lO-UEA">
+                                                    <rect key="frame" x="16" y="8" width="382" height="234"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yRO-Zh-nZn">
+                                                            <rect key="frame" x="16" y="16" width="350" height="210"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="QUB-zq-EWE">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="46"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fBc-Dv-igv">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="52" height="46"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="46" id="NbF-rV-88r"/>
+                                                                                <constraint firstAttribute="width" secondItem="fBc-Dv-igv" secondAttribute="height" multiplier="52:46" id="jvA-p3-QEM"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pRG-lB-kBU">
+                                                                            <rect key="frame" x="102" y="0.0" width="248" height="46"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXQ-zr-ZDo">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="27"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="March 29, 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qj-3p-L2w">
+                                                                                    <rect key="frame" x="0.0" y="27" width="248" height="19"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My dog Alice needs a walk! Is anybody available?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9X-QE-pa8">
+                                                                    <rect key="frame" x="0.0" y="62" width="350" height="80"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nS0-Oi-YmH">
+                                                                    <rect key="frame" x="0.0" y="158" width="350" height="52"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlx-VF-pa3">
+                                                                            <rect key="frame" x="50" y="8" width="250" height="36"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="36" id="KeH-f3-JYP"/>
+                                                                                <constraint firstAttribute="width" secondItem="qlx-VF-pa3" secondAttribute="height" multiplier="250:36" id="ThC-K9-V9P"/>
+                                                                            </constraints>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="plain" title="I'm Available" cornerStyle="capsule">
+                                                                                <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                                                            </buttonConfiguration>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="qlx-VF-pa3" firstAttribute="top" secondItem="nS0-Oi-YmH" secondAttribute="top" constant="8" id="Hy6-EC-lHW"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="qlx-VF-pa3" secondAttribute="bottom" constant="8" id="a7O-U1-atI"/>
+                                                                        <constraint firstItem="qlx-VF-pa3" firstAttribute="centerX" secondItem="nS0-Oi-YmH" secondAttribute="centerX" id="aaA-yO-eqs"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="yRO-Zh-nZn" secondAttribute="trailing" constant="16" id="bXw-i1-Xeu"/>
+                                                        <constraint firstItem="yRO-Zh-nZn" firstAttribute="leading" secondItem="OjY-lO-UEA" secondAttribute="leading" constant="16" id="gyk-vc-ifT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yRO-Zh-nZn" secondAttribute="bottom" constant="8" id="sEf-Ai-RQk"/>
+                                                        <constraint firstItem="yRO-Zh-nZn" firstAttribute="top" secondItem="OjY-lO-UEA" secondAttribute="top" constant="16" id="tjO-CJ-IfV"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OjY-lO-UEA" firstAttribute="top" secondItem="IYT-gf-roe" secondAttribute="top" constant="8" id="LI1-Mr-uMp"/>
+                                                <constraint firstAttribute="trailing" secondItem="OjY-lO-UEA" secondAttribute="trailing" constant="16" id="Xvo-iy-TCm"/>
+                                                <constraint firstAttribute="bottom" secondItem="OjY-lO-UEA" secondAttribute="bottom" constant="8" id="eHE-WN-Rd9"/>
+                                                <constraint firstItem="OjY-lO-UEA" firstAttribute="leading" secondItem="IYT-gf-roe" secondAttribute="leading" constant="16" id="qTF-bA-YJX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="availableButton" destination="qlx-VF-pa3" id="NBV-JS-xVG"/>
+                                            <outlet property="backGroundView" destination="OjY-lO-UEA" id="rLM-7A-rRl"/>
+                                            <outlet property="ownerLabelStack" destination="QUB-zq-EWE" id="MLI-C0-Ay1"/>
+                                            <outlet property="postButton" destination="qlx-VF-pa3" id="T8D-MT-hN7"/>
+                                            <outlet property="postDateLabel" destination="5qj-3p-L2w" id="GjE-oS-qxI"/>
+                                            <outlet property="postDescriptionLabel" destination="h9X-QE-pa8" id="Azr-WR-zmm"/>
+                                            <outlet property="postImageView" destination="fBc-Dv-igv" id="mTY-df-kOb"/>
+                                            <outlet property="postNameLabel" destination="jXQ-zr-ZDo" id="tJM-c9-62z"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -2099,7 +2199,7 @@ Walkers walk them</string>
                             <constraint firstItem="O5j-iy-AL2" firstAttribute="bottom" secondItem="Ptw-Hj-b8c" secondAttribute="bottom" id="wAD-D8-EwV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Chats" id="1IJ-4l-f5k">
+                    <navigationItem key="navigationItem" title="Posts" id="1IJ-4l-f5k">
                         <barButtonItem key="leftBarButtonItem" image="left-button" id="P9e-Wl-ZsW">
                             <color key="tintColor" red="0.086274509799999996" green="0.49019607840000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -2183,7 +2283,7 @@ Walkers walk them</string>
         <scene sceneID="gRM-9J-RvX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6R7-7M-gnC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="chat" id="shb-HC-0TH"/>
+                    <tabBarItem key="tabBarItem" title="" image="filemenu.and.selection" catalog="system" id="shb-HC-0TH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mou-XK-ZTb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -2339,7 +2439,7 @@ Walkers walk them</string>
                                                                         </stackView>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My dog Alice needs a walk! Is anybody available?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff9-af-eRg">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My dog Alice needs a walk! Is anybody available?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff9-af-eRg">
                                                                     <rect key="frame" x="0.0" y="62" width="350" height="80"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4281,17 +4381,9 @@ Walkers walk them</string>
             <point key="canvasLocation" x="31.875" y="36.971830985915496"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="N38-N8-l88">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-        <designable name="Pvm-rv-7c5">
-            <size key="intrinsicContentSize" width="125" height="21"/>
-        </designable>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="deV-c9-ndC"/>
-        <segue reference="uSd-S0-ini"/>
+        <segue reference="69J-aD-3gN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.086274509799999996" green="0.49019607840000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
@@ -4303,6 +4395,7 @@ Walkers walk them</string>
         <image name="coupon" width="24" height="24"/>
         <image name="dog" width="32" height="32"/>
         <image name="down" width="72" height="72"/>
+        <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="hide" width="20" height="17"/>
         <image name="home" width="36" height="35"/>
         <image name="left-button" width="54" height="58"/>

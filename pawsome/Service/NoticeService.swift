@@ -10,20 +10,21 @@ import Alamofire
 
 class NoticeService {
     
-    func getNotice(completion: @escaping (_ success: Bool, _ message: String, _ notices: [Notice]) -> ()) {
-        let url = Configuration.conf.baseURL + "owner/notices"
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+    func getNotices(completion: @escaping (_ success: Bool, _ message: String, _ notices: [Notice]) -> ()) {
+        let url = Configuration.conf.baseURL + "owners/notices"
+        Session.nsRequest(url, method: .get).response { responseData in
+            
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", [])
                 return
             }
             
             do {
-                let response = try JSONDecoder().decode(ApiResponse<[Notice]>.self, from: data)
-                //                    completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
+                let data = try JSONDecoder().decode(ApiResponse<[Notice]>.self, from: data)
+                completion(data.status , data.message, data.data ?? [])
             } catch {
                 print("error", error)
-                completion(false, "Something went wrong",[])
+                completion(false, "Soemthing is wrong", [])
             }
             
         }
@@ -32,12 +33,12 @@ class NoticeService {
     func createNotice(animalId:Int, title:String, desc:String, dateTime:String, addressLine1:String, addressLine2:String, city:String, state:String, country:String, completion: @escaping (_ success: Bool, _ message: String, _ notice: Notice? ) -> ()) {
         let url = Configuration.conf.baseURL + "owners/notices"
         let params = [
-            "fk_animal_id": animalId,
+//            "fk_animal_id": animalId,
             "notice_title": title,
             "notice_description": desc,
             "requested_date_time": dateTime,
             "address_line_1": addressLine1,
-            "address_line_2": addressLine2,
+            "address_line_2": "Ln 2",
             "address_city": city,
             "address_state": state,
             "address_country": country
