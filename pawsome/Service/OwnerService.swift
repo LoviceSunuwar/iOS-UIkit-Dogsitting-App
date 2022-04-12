@@ -12,18 +12,20 @@ class OwnerService {
     
     func getAllOwner(completion: @escaping (_ success: Bool, _ message: String, _ owners: [Profile]) -> ()) {
         let url = Configuration.conf.baseURL + "owner"
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+        
+        Session.nsRequest(url, method: .get).response { responseData in
+            
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", [])
                 return
             }
             
             do {
-                let ownersResponse = try JSONDecoder().decode(ApiResponse<[Profile]>.self, from: data)
-                //                completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
+                let data = try JSONDecoder().decode(ApiResponse<[Profile]>.self, from: data)
+                completion(data.status , data.message, data.data ?? [])
             } catch {
                 print("error", error)
-                completion(false, "Something went wrong",[])
+                completion(false, "Soemthing is wrong", [])
             }
             
         }
@@ -31,18 +33,20 @@ class OwnerService {
     
     func getAllRequestPosts(completion: @escaping (_ success: Bool, _ message: String, _ owners: [OwnersPost]) -> ()) {
         let url = Configuration.conf.baseURL + "owner/post-request"
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+        
+        Session.nsRequest(url, method: .get).response { responseData in
+            
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", [])
                 return
             }
             
             do {
-                let ownersResponse = try JSONDecoder().decode(ApiResponse<[OwnersPost]>.self, from: data)
-                //                    completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
+                let data = try JSONDecoder().decode(ApiResponse<[OwnersPost]>.self, from: data)
+                completion(data.status , data.message, data.data ?? [])
             } catch {
                 print("error", error)
-                completion(false, "Something went wrong",[])
+                completion(false, "Soemthing is wrong", [])
             }
             
         }

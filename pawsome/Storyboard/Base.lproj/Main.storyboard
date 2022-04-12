@@ -4381,6 +4381,14 @@ Walkers walk them</string>
             <point key="canvasLocation" x="31.875" y="36.971830985915496"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="N38-N8-l88">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+        <designable name="Pvm-rv-7c5">
+            <size key="intrinsicContentSize" width="125" height="21"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="deV-c9-ndC"/>
         <segue reference="69J-aD-3gN"/>
