@@ -8,7 +8,7 @@
 import UIKit
 
 class OwnerChatViewController: UIViewController {
-
+    
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
@@ -19,6 +19,9 @@ class OwnerChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var chats:[String] = []
     
+    var noticeService = NoticeService()
+    var noticeList = [Notice]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
@@ -26,7 +29,7 @@ class OwnerChatViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = "Chats"
+        navigationItem.title = "Posts"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -36,6 +39,7 @@ class OwnerChatViewController: UIViewController {
     
     private func setupViews() {
         setupTableView()
+        self.getChatData()
     }
     
     private func setupTableView() {
@@ -50,6 +54,15 @@ class OwnerChatViewController: UIViewController {
     
     private func getChatData() {
         refreshControl.endRefreshing()
+        noticeService.getNotices(){success,message,notices in
+            self.refreshControl.endRefreshing()
+            if success {
+                self.noticeList = notices
+                self.reloadTableView()
+            } else {
+                self.alert(message: message, title: nil, okAction: nil)
+            }
+        }
     }
     
     @objc private func pullToRefresh() {
@@ -59,11 +72,13 @@ class OwnerChatViewController: UIViewController {
 
 extension OwnerChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return noticeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OwnerChatTableViewCell") as! OwnerChatTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OwnersPostTableViewCell") as! OwnersPostTableViewCell
+        cell.isOwner = true;
+        cell.post = noticeList[indexPath.row]
         
         return cell
     }

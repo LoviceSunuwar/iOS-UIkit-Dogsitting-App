@@ -26,7 +26,7 @@ class OwnerConfirmWalkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
-        self.getWalkRequests()
+        self.getAllConfirmRequest()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,22 +53,16 @@ class OwnerConfirmWalkViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    private func getWalkRequests() {
+    func getAllConfirmRequest() {
         walkRequestService.getWalkRequest { success, message, walkRequests in
-            print(walkRequests)
             self.refreshControl.endRefreshing()
             if success {
-                self.walkRequests = walkRequests.filter{!($0.owner_approved_at?.isEmpty ?? true)}
+                self.walkRequests = walkRequests.filter{($0.owner_rejected_at?.isEmpty ?? true)}
                 self.reloadTableView()
             } else {
                 self.alert(message: message, title: nil, okAction: nil)
             }
         }
-    }
-    
-    func getAllConfirmRequest() {
-        refreshControl.endRefreshing()
-        reloadTableView()
     }
     
     @objc private func pullToRefresh() {

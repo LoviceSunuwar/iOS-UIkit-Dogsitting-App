@@ -21,9 +21,10 @@ extension String {
 //        let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
 //        return phoneTest.evaluate(with: self)
         
-        let phoneRegEx = "9+[0-9]{9}"
-        let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
-        return phoneTest.evaluate(with: self)
+//        let phoneRegEx = "9+[0-9]{9}"
+//        let phoneTest = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
+//        return phoneTest.evaluate(with: self)
+        return true;
     }
     
     var htmlToAttributedString: NSAttributedString? {

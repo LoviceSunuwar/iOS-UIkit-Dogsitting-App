@@ -12,8 +12,9 @@ class AnimalService {
     
     func getAnimal(completion: @escaping (_ success: Bool, _ message: String, _ animal: [Animal
                                                                                         ]) -> ()) {
-        let url = Configuration.conf.baseURL + "owner/animals"
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+        let url = Configuration.conf.baseURL + "owners/animals"
+        
+        Session.nsRequest(url, method: .get).response { (responseData) in
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", [])
                 return
@@ -21,7 +22,7 @@ class AnimalService {
             
             do {
                 let response = try JSONDecoder().decode(ApiResponse<[Animal]>.self, from: data)
-                //                    completion(ownersResponse.isSuccess, ownersResponse.message, ownersResponse.data ?? [])
+                completion(response.status, response.message, response.data ?? [])
             } catch {
                 print("error", error)
                 completion(false, "Something went wrong",[])
@@ -32,22 +33,24 @@ class AnimalService {
     
     func createAnimal(animalName:String, dob:String, breedType:String, completion: @escaping (_ success: Bool, _ message: String, _ animal: Animal? ) -> ()) {
         let url = Configuration.conf.baseURL + "owner/animals"
-        let params = [
+        let paramToSend = [
             "animal_name": animalName,
             "date_of_birth": dob,
             "breed_type": breedType
         ] as [String: Any]
         
-        AF.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+        Session.nsRequest(url, method: .post, parameters: paramToSend).response { responseData in
+            
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", nil)
                 return
             }
             
             do {
-                let data = try JSONDecoder().decode(ApiResponse<Animal>.self, from: data)
+                let apiResponse = try JSONDecoder().decode(ApiResponse<Animal>.self, from: data)
+                completion(apiResponse.status , apiResponse.message, apiResponse.data)
                 
-                completion(data.status, data.message, data.data)
+                
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong", nil)
@@ -58,22 +61,24 @@ class AnimalService {
     
     func updateAnimal(animalId:String, animalName:String, dob:String, breedType:String, completion: @escaping (_ success: Bool, _ message: String, _ animal: Animal? ) -> ()) {
         let url = Configuration.conf.baseURL + "owner/animals/" + animalId + "/update"
-        let params = [
+        let paramToSend = [
             "animal_name": animalName,
             "date_of_birth": dob,
             "breed_type": breedType
         ] as [String: Any]
         
-        AF.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { (responseData) in
+        Session.nsRequest(url, method: .post, parameters: paramToSend).response { responseData in
+            
             guard let data = responseData.data else {
                 completion(false, "Something went wrong", nil)
                 return
             }
             
             do {
-                let data = try JSONDecoder().decode(ApiResponse<Animal>.self, from: data)
+                let apiResponse = try JSONDecoder().decode(ApiResponse<Animal>.self, from: data)
+                completion(apiResponse.status, apiResponse.message, apiResponse.data)
                 
-                completion(data.status, data.message, data.data)
+                
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong", nil)

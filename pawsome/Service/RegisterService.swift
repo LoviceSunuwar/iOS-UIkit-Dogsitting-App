@@ -33,7 +33,7 @@ class RegisterService {
                 GlobalConstants.KeyValues.token = data.token
                 GlobalConstants.KeyValues.userType = EUserType.init(rawValue: data.data?.user_type_id ?? 0)
                 
-                completion(data.status ?? false, data.message, data.data)
+                completion(data.status , data.message, data.data)
             } catch {
                 print("error", error)
                 completion(false, "Soemthing is wrong",nil)
