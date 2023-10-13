@@ -17,7 +17,6 @@ These libraries significantly enhance the functionality and user experience of y
 
 User
 with the introduction to the app
-ChatGPT
 Certainly, here's an updated introduction to your UIKit-based iOS app for a dog-sitting service provider, including mention of the CocoaPods libraries you've used:
 
 Introduction to the Dog-Sitting Service Provider App
