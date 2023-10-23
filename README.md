@@ -1,10 +1,7 @@
 
-<img width="782" alt="Screenshot 2023-10-23 at 1 26 49 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/01318b41-8a4e-43e0-83c3-90d7a0d8eea9">
-<img width="789" alt="Screenshot 2023-10-23 at 1 26 55 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/a7b1bacb-fd8a-4283-a248-c068c9cae4d1">
-<img width="791" alt="Screenshot 2023-10-23 at 1 27 03 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/624aee00-bed7-44ef-ade0-ebdc411c8d19">
-<img width="782" alt="Screenshot 2023-10-23 at 1 27 10 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/6ec259e5-c583-4f5f-a54d-5672b484ab67">
-<img width="377" alt="Screenshot 2023-10-23 at 1 27 24 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/e0c95f78-9572-443d-9ea1-741766926766">
-<img width="790" alt="Screenshot 2023-10-23 at 1 27 33 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/234cef63-54fa-4e4f-91bc-121cb44717c5">
+<img width="350" alt="Screenshot 2023-10-23 at 1 26 49 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/01318b41-8a4e-43e0-83c3-90d7a0d8eea9"> <img width="350" alt="Screenshot 2023-10-23 at 1 26 55 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/a7b1bacb-fd8a-4283-a248-c068c9cae4d1">
+<img width="350" alt="Screenshot 2023-10-23 at 1 27 03 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/624aee00-bed7-44ef-ade0-ebdc411c8d19"> <img width="350" alt="Screenshot 2023-10-23 at 1 27 10 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/6ec259e5-c583-4f5f-a54d-5672b484ab67">
+<img width="350" alt="Screenshot 2023-10-23 at 1 27 24 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/e0c95f78-9572-443d-9ea1-741766926766"> <img width="359" alt="Screenshot 2023-10-23 at 1 27 33 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/234cef63-54fa-4e4f-91bc-121cb44717c5">
 
 
 
