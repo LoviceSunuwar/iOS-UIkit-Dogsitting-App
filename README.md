@@ -1,3 +1,17 @@
+
+<img width="782" alt="Screenshot 2023-10-23 at 1 26 49 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/01318b41-8a4e-43e0-83c3-90d7a0d8eea9">
+<img width="789" alt="Screenshot 2023-10-23 at 1 26 55 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/a7b1bacb-fd8a-4283-a248-c068c9cae4d1">
+<img width="791" alt="Screenshot 2023-10-23 at 1 27 03 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/624aee00-bed7-44ef-ade0-ebdc411c8d19">
+<img width="782" alt="Screenshot 2023-10-23 at 1 27 10 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/6ec259e5-c583-4f5f-a54d-5672b484ab67">
+<img width="377" alt="Screenshot 2023-10-23 at 1 27 24 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/e0c95f78-9572-443d-9ea1-741766926766">
+<img width="790" alt="Screenshot 2023-10-23 at 1 27 33 PM" src="https://github.com/LoviceSunuwar/iOS-UIkit-Dogsitting-App/assets/53461002/234cef63-54fa-4e4f-91bc-121cb44717c5">
+
+
+
+
+
+
+
 Alamofire: Alamofire is a widely-used Swift-based networking library that simplifies network requests, making it easier to communicate with APIs and web services.
 
 AlamofireImage: AlamofireImage is an extension of Alamofire that focuses on image downloading and caching. It provides efficient handling of images in your app, optimizing performance when displaying them.
@@ -42,3 +56,7 @@ Visual Feedback: "SwiftSpinner" is used to provide users with visual feedback th
 Efficient JSON Handling: "SwiftyJSON" simplifies the app's ability to work with JSON data, ensuring that responses from APIs are seamlessly integrated and understood, supporting smooth communication with external services.
 
 In conclusion, the Dog-Sitting Service Provider App is a comprehensive and robust solution for the dog-sitting industry. It offers a secure, efficient, and feature-rich experience for both dog owners and dog sitters. With role-based user management, request handling, and the integration of CocoaPods libraries, it's a powerful and user-friendly platform that brings together pet lovers and pet care providers.
+
+
+
+
